@@ -1,4 +1,4 @@
-baseURL = "https://agapovone.github.io/blog/"
+baseURL = "https://agapovone.github.io/"
 languageCode = "en-US"
 title = "Alexey Agapov Blog"
 theme = "blist"
