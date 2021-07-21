@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://agapovone.github.io/"
 languageCode = "en-US"
-title = "My New Hugo Site"
+title = "Alexey Agapov Blog"
 theme = "blist"
 
 [params]
@@ -24,7 +24,7 @@ theme = "blist"
 
 [params.homepage]
   title = "Hey! I'm Agapov Alexey"
-  description = "27 y/o developer from Kontur, Yekaterinburg"
+  description = "27 y/o developer from Yekaterinburg, working @ Kontur"
 
 [params.homepage.social]
   description = "I work on everything coding and tweet developer memes"

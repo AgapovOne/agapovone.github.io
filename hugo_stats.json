@@ -5,17 +5,12 @@
       "article",
       "body",
       "circle",
-      "code",
       "div",
       "footer",
       "h1",
-      "h2",
-      "h3",
-      "h4",
       "head",
       "header",
       "html",
-      "img",
       "input",
       "li",
       "line",
@@ -24,12 +19,10 @@
       "meta",
       "p",
       "path",
-      "pre",
       "rect",
       "script",
       "section",
       "span",
-      "strong",
       "svg",
       "title",
       "ul"
@@ -66,7 +59,6 @@
       "grid-cols-1",
       "h-full",
       "hidden",
-      "highlight",
       "hover:border-gray-800",
       "hover:text-gray-800",
       "icon",
@@ -129,18 +121,6 @@
       "transition-colors",
       "w-full"
     ],
-    "ids": [
-      "cell-configuration",
-      "data-source",
-      "hello-mate",
-      "layout-для-сложных-экранов",
-      "главные-фичи",
-      "пагинация-при-скролле",
-      "почему-не-таблица",
-      "прилипающие-хедерыфутеры-секций",
-      "тень-для-всей-секции-insetgrouped-элементов-или-рамка",
-      "хорошие-новости-для-вовы",
-      "что-позволяет-делать"
-    ]
+    "ids": null
   }
 }
