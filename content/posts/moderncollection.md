@@ -1,7 +1,6 @@
 ---
 title: "Modern Collection Views"
 date: 2021-07-21T10:49:14+05:00
-draft: true
 ---
 
 [source от Apple](https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views)
@@ -54,7 +53,7 @@ dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: co
 
 ### Layout для сложных экранов
 
-![](Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-07-19%20at%2022.46.23.png)
+![](1.png)
 `DistinctSectionsViewController` как пример разных layout для разных секций.
 
 ```swift
@@ -103,16 +102,16 @@ List Cell для Expandable/Collapsible sections. Позволяет измен�
 #### Тень для всей секции insetGrouped элементов. Или рамка.
 
 Изи!
-![](Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-07-19%20at%2022.39.56.png)
+![](2png)
 `SectionBackgroundDecorationView` в примере.
 
 #### Прилипающие хедеры/футеры секций
 
 Изи!
-![](Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-07-19%20at%2022.44.14.png)
+![](3.png)
 `PinnedSectionHeaderFooterViewController` в примере.
 
 #### Пагинация при скролле
 
-![](<Simulator%20Screen%20Shot%20-%20iPad%20Pro%20(11-inch)%20(3rd%20generation)%20-%202021-07-20%20at%2009.03.46.png>)
+![](4.png)
 `OrthogonalScrollBehaviorViewController` в примере
