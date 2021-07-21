@@ -53,7 +53,7 @@ dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: co
 
 ### Layout для сложных экранов
 
-![](1.png)
+![](/collections/1.png)
 `DistinctSectionsViewController` как пример разных layout для разных секций.
 
 ```swift
@@ -102,16 +102,16 @@ List Cell для Expandable/Collapsible sections. Позволяет измен�
 #### Тень для всей секции insetGrouped элементов. Или рамка.
 
 Изи!
-![](2png)
+![](/collections/2.png)
 `SectionBackgroundDecorationView` в примере.
 
 #### Прилипающие хедеры/футеры секций
 
 Изи!
-![](3.png)
+![](/collections/3.png)
 `PinnedSectionHeaderFooterViewController` в примере.
 
 #### Пагинация при скролле
 
-![](4.png)
+![](/collections/4.png)
 `OrthogonalScrollBehaviorViewController` в примере
