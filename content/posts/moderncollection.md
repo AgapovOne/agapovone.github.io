@@ -1,6 +1,7 @@
 ---
 title: "Modern Collection Views"
 date: 2021-07-21T10:49:14+05:00
+thumbnail: https://images.unsplash.com/photo-1562575228-c8e99d410017?ixid=MnwxNzg0OHwwfDF8YWxsfHx8fHx8fHx8MTYyNjk4MjIyMQ&ixlib=rb-1.2.1&w=992&fit=crop&ar=8:5
 ---
 
 [source от Apple](https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views)
