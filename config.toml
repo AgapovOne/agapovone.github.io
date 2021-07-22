@@ -27,13 +27,9 @@ theme = "agapovblist"
   description = "27 y/o developer from Yekaterinburg, working @ Kontur"
 
 [params.homepage.social]
-  description = "I work on everything coding and tweet developer memes"
-  twitter = "https://twitter.com/"
-  linkedin = "https://linkedin.com/in/"
-  github = "https://github.com/"
-  medium = "https://medium.com/"
-  reddit = "https://reddit.com/"
-  dribbble = "https://dribbble.com/"
+  description = "I work on everything coding and tweet never"
+  twitter = "https://twitter.com/agapov_one"
+  github = "https://github.com/AgapovOne"
 
 [[menu.main]]
   name = "About"
