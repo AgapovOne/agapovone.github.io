@@ -1,11 +1,11 @@
 baseURL = "https://agapovone.github.io/"
 languageCode = "en-US"
-title = "Alexey Agapov Blog"
+title = "agapov.one"
 theme = "agapovblist"
 
 [params]
   description = "Modern blog theme for your Hugo site."
-  name = "Blist Theme"
+  name = "Alexey Agapov Theme"
 
   # Enable the darkmode toggle in header
   darkModeToggle = true

@@ -1,4 +1,4 @@
 ---
 author: Agapov Alexey
-title: Posts
+title: Blog
 ---
