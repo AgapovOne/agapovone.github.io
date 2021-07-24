@@ -16,7 +16,7 @@
 <meta property="og:description" content="iOS and nothing else.">
 <link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css>
-<link rel=stylesheet href=/sass/main.min.ecbc24bdb795c7bda75244b51e790e543845c3a8b8eb6915a9818c96d1048140.css>
+<link rel=stylesheet href=/sass/main.min.26adcd9d1d593374deb096fe091ece38764589f6324d94d53a2ea02f12bd7068.css>
 </head> <script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
 <body class=dark>
 <nav class=navbar>
@@ -91,44 +91,54 @@ By Alexey Agapov |
 Data source
 </h3>
 <p>Data-driven работает через… RxDataSources? DifferenceKit? Native!
-Собираем snapshot, применяем.</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
+Собираем <code>NSDiffableDataSourceSnapshot</code>, применяем.</p>
+<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=kd>var</span> <span class=nv>snapshot</span> <span class=p>=</span> <span class=n>NSDiffableDataSourceSnapshot</span><span class=p>&lt;</span><span class=n>Section</span><span class=p>,</span> <span class=nb>Int</span><span class=p>&gt;()</span>
-<span class=n>snapshot</span><span class=p>.</span><span class=n>appendSections</span><span class=p>([.</span><span class=n>main</span><span class=p>])</span>
-<span class=n>snapshot</span><span class=p>.</span><span class=n>appendItems</span><span class=p>(</span><span class=nb>Array</span><span class=p>(</span><span class=mf>0.</span><span class=p>.&lt;</span><span class=mi>94</span><span class=p>))</span>
-<span class=n>dataSource</span><span class=p>.</span><span class=n>apply</span><span class=p>(</span><span class=n>snapshot</span><span class=p>,</span> <span class=n>animatingDifferences</span><span class=p>:</span> <span class=kc>false</span><span class=p>)</span>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-swift data-lang=swift><span style=color:#8be9fd;font-style:italic>var</span> <span style=color:#8be9fd;font-style:italic>snapshot</span> = NSDiffableDataSourceSnapshot&lt;Section, <span style=color:#8be9fd;font-style:italic>Int</span>&gt;()
+snapshot.appendSections([.main])
+snapshot.appendItems(<span style=color:#8be9fd;font-style:italic>Array</span>(<span style=color:#bd93f9>0.</span>.&lt;<span style=color:#bd93f9>94</span>))
+dataSource.apply(snapshot, animatingDifferences: <span style=color:#ff79c6>false</span>)
 </code></pre></td></tr></table>
 </div>
 </div><p>Data source — конфигурация с cellRegistration</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
-</span><span class=lnt>9
+<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=kd>let</span> <span class=nv>cellRegistration</span> <span class=p>=</span> <span class=n>UICollectionView</span><span class=p>.</span><span class=n>CellRegistration</span><span class=p>&lt;</span><span class=n>TextCell</span><span class=p>,</span> <span class=nb>Int</span><span class=p>&gt;</span> <span class=p>{</span> <span class=p>(</span><span class=n>cell</span><span class=p>,</span> <span class=n>indexPath</span><span class=p>,</span> <span class=n>identifier</span><span class=p>)</span> <span class=k>in</span>
-    <span class=c1>// Populate the cell with our item description.</span>
-    <span class=n>cell</span><span class=p>.</span><span class=n>label</span><span class=p>.</span><span class=n>text</span> <span class=p>=</span> <span class=s>&#34;</span><span class=si>\(</span><span class=n>identifier</span><span class=si>)</span><span class=s>&#34;</span>
-<span class=p>}</span>
-<span class=n>dataSource</span> <span class=p>=</span> <span class=n>UICollectionViewDiffableDataSource</span><span class=p>&lt;</span><span class=n>Section</span><span class=p>,</span> <span class=nb>Int</span><span class=p>&gt;(</span><span class=n>collectionView</span><span class=p>:</span> <span class=n>collectionView</span><span class=p>)</span> <span class=p>{</span>
-<span class=p>(</span><span class=n>collectionView</span><span class=p>:</span> <span class=n>UICollectionView</span><span class=p>,</span> <span class=n>indexPath</span><span class=p>:</span> <span class=n>IndexPath</span><span class=p>,</span> <span class=n>identifier</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>-&gt;</span> <span class=n>UICollectionViewCell</span><span class=p>?</span> <span class=k>in</span>
-    <span class=c1>// Return the cell.</span>
-    <span class=k>return</span> <span class=n>collectionView</span><span class=p>.</span><span class=n>dequeueConfiguredReusableCell</span><span class=p>(</span><span class=n>using</span><span class=p>:</span> <span class=n>cellRegistration</span><span class=p>,</span> <span class=k>for</span><span class=p>:</span> <span class=n>indexPath</span><span class=p>,</span> <span class=n>item</span><span class=p>:</span> <span class=n>identifier</span><span class=p>)</span>
-<span class=p>}</span>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-swift data-lang=swift><span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>cellRegistration</span> = UICollectionView.CellRegistration&lt;TextCell, <span style=color:#8be9fd;font-style:italic>Int</span>&gt; { (cell, indexPath, identifier) <span style=color:#ff79c6>in</span>
+  <span style=color:#6272a4>// Populate the cell with our item description.</span>
+  cell.label.text = <span style=color:#f1fa8c>&#34;</span><span style=color:#f1fa8c>\(</span>identifier<span style=color:#f1fa8c>)</span><span style=color:#f1fa8c>&#34;</span>
+}
+dataSource = UICollectionViewDiffableDataSource&lt;Section, <span style=color:#8be9fd;font-style:italic>Int</span>&gt;(
+  collectionView: collectionView
+) { (
+  collectionView: UICollectionView,
+  indexPath: IndexPath,
+  identifier: <span style=color:#8be9fd;font-style:italic>Int</span>
+) -&gt; UICollectionViewCell? <span style=color:#ff79c6>in</span>
+  <span style=color:#6272a4>// Return the cell.</span>
+  <span style=color:#ff79c6>return</span> collectionView.dequeueConfiguredReusableCell(using: cellRegistration, <span style=color:#ff79c6>for</span>: indexPath, item: identifier)
+}
 </code></pre></td></tr></table>
 </div>
 </div><p>Есть одна проблемка с native data source. Он постоянно будет удалять и затем добавлять новую ячейку, не делая reload данных на месте (<a href=https://github.com/ekazaev/ChatLayout#about-uicollectionviewdiffabledatasource>тут говорят</a>).
@@ -141,62 +151,74 @@ Layout для сложных экранов
 </h3>
 <p><img loading=lazy src=/collections/1.png alt width=1170 height=2532>
 <code>DistinctSectionsViewController</code> как пример разных layout для разных секций.</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
+<div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=kd>let</span> <span class=nv>layout</span> <span class=p>=</span> <span class=n>UICollectionViewCompositionalLayout</span> <span class=p>{</span> <span class=p>(</span><span class=n>sectionIndex</span><span class=p>:</span> <span class=nb>Int</span><span class=p>,</span>
-            <span class=n>layoutEnvironment</span><span class=p>:</span> <span class=n>NSCollectionLayoutEnvironment</span><span class=p>)</span> <span class=p>-&gt;</span> <span class=n>NSCollectionLayoutSection</span><span class=p>?</span> <span class=k>in</span>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-swift data-lang=swift><span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>layout</span> = UICollectionViewCompositionalLayout { (
+  sectionIndex: <span style=color:#8be9fd;font-style:italic>Int</span>,
+  layoutEnvironment: NSCollectionLayoutEnvironment
+  ) -&gt; NSCollectionLayoutSection? <span style=color:#ff79c6>in</span>
 
-    <span class=k>guard</span> <span class=kd>let</span> <span class=nv>sectionLayoutKind</span> <span class=p>=</span> <span class=n>SectionLayoutKind</span><span class=p>(</span><span class=n>rawValue</span><span class=p>:</span> <span class=n>sectionIndex</span><span class=p>)</span> <span class=k>else</span> <span class=p>{</span> <span class=k>return</span> <span class=kc>nil</span> <span class=p>}</span>
-    <span class=kd>let</span> <span class=nv>columns</span> <span class=p>=</span> <span class=n>sectionLayoutKind</span><span class=p>.</span><span class=n>columnCount</span>
+  <span style=color:#ff79c6>guard</span> <span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>sectionLayoutKind</span> = SectionLayoutKind(rawValue: sectionIndex) <span style=color:#ff79c6>else</span> { <span style=color:#ff79c6>return</span> <span style=color:#ff79c6>nil</span> }
+  <span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>columns</span> = sectionLayoutKind.columnCount
 
-    <span class=c1>// The group auto-calculates the actual item width to make</span>
-    <span class=c1>// the requested number of columns fit, so this widthDimension is ignored.</span>
-    <span class=kd>let</span> <span class=nv>itemSize</span> <span class=p>=</span> <span class=n>NSCollectionLayoutSize</span><span class=p>(</span><span class=n>widthDimension</span><span class=p>:</span> <span class=p>.</span><span class=n>fractionalWidth</span><span class=p>(</span><span class=mf>1.0</span><span class=p>),</span>
-                                          <span class=n>heightDimension</span><span class=p>:</span> <span class=p>.</span><span class=n>fractionalHeight</span><span class=p>(</span><span class=mf>1.0</span><span class=p>))</span>
-    <span class=kd>let</span> <span class=nv>item</span> <span class=p>=</span> <span class=n>NSCollectionLayoutItem</span><span class=p>(</span><span class=n>layoutSize</span><span class=p>:</span> <span class=n>itemSize</span><span class=p>)</span>
-    <span class=n>item</span><span class=p>.</span><span class=n>contentInsets</span> <span class=p>=</span> <span class=n>NSDirectionalEdgeInsets</span><span class=p>(</span><span class=n>top</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span> <span class=n>leading</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span> <span class=n>bottom</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span> <span class=n>trailing</span><span class=p>:</span> <span class=mi>2</span><span class=p>)</span>
+  <span style=color:#6272a4>// The group auto-calculates the actual item width to make</span>
+  <span style=color:#6272a4>// the requested number of columns fit, so this widthDimension is ignored.</span>
+  <span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>itemSize</span> = NSCollectionLayoutSize(
+    widthDimension: .fractionalWidth(<span style=color:#bd93f9>1.0</span>),
+    heightDimension: .fractionalHeight(<span style=color:#bd93f9>1.0</span>)
+  )
+  <span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>item</span> = NSCollectionLayoutItem(layoutSize: itemSize)
+  item.contentInsets = NSDirectionalEdgeInsets(top: <span style=color:#bd93f9>2</span>, leading: <span style=color:#bd93f9>2</span>, bottom: <span style=color:#bd93f9>2</span>, trailing: <span style=color:#bd93f9>2</span>)
 
-    <span class=kd>let</span> <span class=nv>groupHeight</span> <span class=p>=</span> <span class=n>columns</span> <span class=p>==</span> <span class=mi>1</span> <span class=p>?</span>
-        <span class=n>NSCollectionLayoutDimension</span><span class=p>.</span><span class=n>absolute</span><span class=p>(</span><span class=mi>44</span><span class=p>)</span> <span class=p>:</span>
-        <span class=n>NSCollectionLayoutDimension</span><span class=p>.</span><span class=n>fractionalWidth</span><span class=p>(</span><span class=mf>0.2</span><span class=p>)</span>
-        <span class=c1>// Element height takes 20% of section width</span>
-    <span class=kd>let</span> <span class=nv>groupSize</span> <span class=p>=</span> <span class=n>NSCollectionLayoutSize</span><span class=p>(</span><span class=n>widthDimension</span><span class=p>:</span> <span class=p>.</span><span class=n>fractionalWidth</span><span class=p>(</span><span class=mf>1.0</span><span class=p>),</span>
-                                                  <span class=n>heightDimension</span><span class=p>:</span> <span class=n>groupHeight</span><span class=p>)</span>
-    <span class=kd>let</span> <span class=nv>group</span> <span class=p>=</span> <span class=n>NSCollectionLayoutGroup</span><span class=p>.</span><span class=n>horizontal</span><span class=p>(</span><span class=n>layoutSize</span><span class=p>:</span> <span class=n>groupSize</span><span class=p>,</span> <span class=n>subitem</span><span class=p>:</span> <span class=n>item</span><span class=p>,</span> <span class=bp>count</span><span class=p>:</span> <span class=n>columns</span><span class=p>)</span>
+  <span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>groupHeight</span> = columns == <span style=color:#bd93f9>1</span> ?
+    NSCollectionLayoutDimension.absolute(<span style=color:#bd93f9>44</span>) :
+    NSCollectionLayoutDimension.fractionalWidth(<span style=color:#bd93f9>0.2</span>)
+    <span style=color:#6272a4>// Element height takes 20% of section width</span>
+  <span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>groupSize</span> = NSCollectionLayoutSize(
+    widthDimension: .fractionalWidth(<span style=color:#bd93f9>1.0</span>),
+    heightDimension: groupHeight
+  )
+  <span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>group</span> = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
 
-    <span class=kd>let</span> <span class=nv>section</span> <span class=p>=</span> <span class=n>NSCollectionLayoutSection</span><span class=p>(</span><span class=n>group</span><span class=p>:</span> <span class=n>group</span><span class=p>)</span>
-    <span class=n>section</span><span class=p>.</span><span class=n>contentInsets</span> <span class=p>=</span> <span class=n>NSDirectionalEdgeInsets</span><span class=p>(</span><span class=n>top</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span> <span class=n>leading</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span> <span class=n>bottom</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span> <span class=n>trailing</span><span class=p>:</span> <span class=mi>20</span><span class=p>)</span>
-    <span class=n>section</span><span class=p>.</span><span class=n>contentInsetsReference</span> <span class=p>=</span> <span class=p>.</span><span class=n>readableContent</span>
-    <span class=k>return</span> <span class=n>section</span>
-<span class=p>}</span>
+  <span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>section</span> = NSCollectionLayoutSection(group: group)
+  section.contentInsets = NSDirectionalEdgeInsets(top: <span style=color:#bd93f9>20</span>, leading: <span style=color:#bd93f9>20</span>, bottom: <span style=color:#bd93f9>20</span>, trailing: <span style=color:#bd93f9>20</span>)
+  section.contentInsetsReference = .readableContent
+  <span style=color:#ff79c6>return</span> section
+}
 </code></pre></td></tr></table>
 </div>
 </div><ul>
