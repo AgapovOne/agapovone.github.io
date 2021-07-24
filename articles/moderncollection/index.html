@@ -1,0 +1,264 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=theme-color content="dark">
+<title>Modern Collection Views | Agapov Alexey</title>
+<meta property="og:site_name" content="Alexey Agapov blog">
+<meta property="og:title" content="Modern Collection Views | Agapov Alexey">
+<meta itemprop=name content="Modern Collection Views | Agapov Alexey">
+<meta name=twitter:title content="Modern Collection Views | Agapov Alexey">
+<meta name=application-name content="Modern Collection Views | Agapov Alexey">
+<meta name=description content="iOS and nothing else.">
+<meta name=twitter:description content="iOS and nothing else.">
+<meta itemprop=description content="iOS and nothing else.">
+<meta property="og:description" content="iOS and nothing else.">
+<link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css>
+<link rel=stylesheet href=/sass/main.min.fff02cf959349d491bde6711881141885fb460c494d01a3eb7f13b77733de5f3.css>
+</head> <script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
+<body class=dark>
+<nav class=navbar>
+<div class=container>
+<div class=flex>
+<div>
+<a class=brand href=/>
+<span class=emoji>
+🤯
+</span>
+Agapov Alexey
+</a>
+</div>
+<div class=flex>
+<a href=/blog/>Blog</a>
+<button id=dark-mode-button><svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163.0 101.643 1.641 1.163 1.163.0 00-1.643-1.641zm-16.022 14.38a1.74 1.74.0 000 2.465 1.742 1.742.0 100-2.465zm13.968-2.147a2.904 2.904.0 01-4.108.0 2.902 2.902.0 010-4.107 2.902 2.902.0 014.108.0 2.902 2.902.0 010 4.107z" fill="#ffcc4d"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg><svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M16 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2V2zm18 14s2 0 2 2-2 2-2 2h-2s-2 0-2-2 2-2 2-2h2zM4 16s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2h2zm5.121-8.707s1.414 1.414.0 2.828-2.828.0-2.828.0L4.878 8.708s-1.414-1.414.0-2.829c1.415-1.414 2.829.0 2.829.0l1.414 1.414zm21 21s1.414 1.414.0 2.828-2.828.0-2.828.0l-1.414-1.414s-1.414-1.414.0-2.828 2.828.0 2.828.0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zM16 32s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2v-2z"/><circle fill="#ffd983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main>
+<div class=container>
+<article>
+<nav class=toc></nav>
+<header class=article-header>
+<div class=thumb>
+<div>
+<h1>Modern Collection Views</h1>
+<div class=post-meta>
+<div>
+By Alexey Agapov |
+<time>July 21, 2021</time>
+| 3 minutes
+</div>
+<div class=tags>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class=article-post><p><a href=https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views>source от Apple</a></p>
+<p>iOS 14+ для реализации всех фич.
+В iOS 13 ввели diffable data source.
+В iOS 14 появился compositional layout, реализующий все возможности таблиц и улучшающий коллекции.</p>
+<h3 id=почему-не-таблица>
+<a href=#%d0%bf%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%bd%d0%b5-%d1%82%d0%b0%d0%b1%d0%bb%d0%b8%d1%86%d0%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Почему не таблица?
+</h3>
+<ul>
+<li>Горизонтальный скролл</li>
+<li>Удобно конфигурировать state. highlighted/selected/disabled</li>
+</ul>
+<h3 id=что-позволяет-делать>
+<a href=#%d1%87%d1%82%d0%be-%d0%bf%d0%be%d0%b7%d0%b2%d0%be%d0%bb%d1%8f%d0%b5%d1%82-%d0%b4%d0%b5%d0%bb%d0%b0%d1%82%d1%8c class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Что позволяет делать?
+</h3>
+<ul>
+<li>Collapsible/Expandable Sections</li>
+<li>Секции с разным layout. inset grouped, sidebar (iPad-related), horizontal scroll, columns.</li>
+</ul>
+<h2 id=главные-фичи>
+<a href=#%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d1%8b%d0%b5-%d1%84%d0%b8%d1%87%d0%b8 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Главные фичи
+</h2>
+<h3 id=data-source>
+<a href=#data-source class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Data source
+</h3>
+<p>Data-driven работает через… RxDataSources? DifferenceKit? Native!
+Собираем snapshot, применяем.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=kd>var</span> <span class=nv>snapshot</span> <span class=p>=</span> <span class=n>NSDiffableDataSourceSnapshot</span><span class=p>&lt;</span><span class=n>Section</span><span class=p>,</span> <span class=nb>Int</span><span class=p>&gt;()</span>
+<span class=n>snapshot</span><span class=p>.</span><span class=n>appendSections</span><span class=p>([.</span><span class=n>main</span><span class=p>])</span>
+<span class=n>snapshot</span><span class=p>.</span><span class=n>appendItems</span><span class=p>(</span><span class=nb>Array</span><span class=p>(</span><span class=mf>0.</span><span class=p>.&lt;</span><span class=mi>94</span><span class=p>))</span>
+<span class=n>dataSource</span><span class=p>.</span><span class=n>apply</span><span class=p>(</span><span class=n>snapshot</span><span class=p>,</span> <span class=n>animatingDifferences</span><span class=p>:</span> <span class=kc>false</span><span class=p>)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Data source — конфигурация с cellRegistration</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=kd>let</span> <span class=nv>cellRegistration</span> <span class=p>=</span> <span class=n>UICollectionView</span><span class=p>.</span><span class=n>CellRegistration</span><span class=p>&lt;</span><span class=n>TextCell</span><span class=p>,</span> <span class=nb>Int</span><span class=p>&gt;</span> <span class=p>{</span> <span class=p>(</span><span class=n>cell</span><span class=p>,</span> <span class=n>indexPath</span><span class=p>,</span> <span class=n>identifier</span><span class=p>)</span> <span class=k>in</span>
+    <span class=c1>// Populate the cell with our item description.</span>
+    <span class=n>cell</span><span class=p>.</span><span class=n>label</span><span class=p>.</span><span class=n>text</span> <span class=p>=</span> <span class=s>&#34;</span><span class=si>\(</span><span class=n>identifier</span><span class=si>)</span><span class=s>&#34;</span>
+<span class=p>}</span>
+<span class=n>dataSource</span> <span class=p>=</span> <span class=n>UICollectionViewDiffableDataSource</span><span class=p>&lt;</span><span class=n>Section</span><span class=p>,</span> <span class=nb>Int</span><span class=p>&gt;(</span><span class=n>collectionView</span><span class=p>:</span> <span class=n>collectionView</span><span class=p>)</span> <span class=p>{</span>
+<span class=p>(</span><span class=n>collectionView</span><span class=p>:</span> <span class=n>UICollectionView</span><span class=p>,</span> <span class=n>indexPath</span><span class=p>:</span> <span class=n>IndexPath</span><span class=p>,</span> <span class=n>identifier</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>-&gt;</span> <span class=n>UICollectionViewCell</span><span class=p>?</span> <span class=k>in</span>
+    <span class=c1>// Return the cell.</span>
+    <span class=k>return</span> <span class=n>collectionView</span><span class=p>.</span><span class=n>dequeueConfiguredReusableCell</span><span class=p>(</span><span class=n>using</span><span class=p>:</span> <span class=n>cellRegistration</span><span class=p>,</span> <span class=k>for</span><span class=p>:</span> <span class=n>indexPath</span><span class=p>,</span> <span class=n>item</span><span class=p>:</span> <span class=n>identifier</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Есть одна проблемка с native data source. Он постоянно будет удалять и затем добавлять новую ячейку, не делая reload данных на месте (<a href=https://github.com/ekazaev/ChatLayout#about-uicollectionviewdiffabledatasource>тут говорят</a>).
+<a href=https://github.com/ra1028/DifferenceKit>DifferenceKit</a> позволяет это делать, поддерживает перезагрузку. Бенчмарки этой либы говорят, что она самая быстрая среди всех похожих либ. Хорошая либа
+Но для использования с новым API cellRegistration нужно использовать native Data source</p>
+<h3 id=layout-для-сложных-экранов>
+<a href=#layout-%d0%b4%d0%bb%d1%8f-%d1%81%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d1%85-%d1%8d%d0%ba%d1%80%d0%b0%d0%bd%d0%be%d0%b2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Layout для сложных экранов
+</h3>
+<p><img loading=lazy src=/collections/1.png alt width=1170 height=2532>
+<code>DistinctSectionsViewController</code> как пример разных layout для разных секций.</p>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=kd>let</span> <span class=nv>layout</span> <span class=p>=</span> <span class=n>UICollectionViewCompositionalLayout</span> <span class=p>{</span> <span class=p>(</span><span class=n>sectionIndex</span><span class=p>:</span> <span class=nb>Int</span><span class=p>,</span>
+            <span class=n>layoutEnvironment</span><span class=p>:</span> <span class=n>NSCollectionLayoutEnvironment</span><span class=p>)</span> <span class=p>-&gt;</span> <span class=n>NSCollectionLayoutSection</span><span class=p>?</span> <span class=k>in</span>
+
+    <span class=k>guard</span> <span class=kd>let</span> <span class=nv>sectionLayoutKind</span> <span class=p>=</span> <span class=n>SectionLayoutKind</span><span class=p>(</span><span class=n>rawValue</span><span class=p>:</span> <span class=n>sectionIndex</span><span class=p>)</span> <span class=k>else</span> <span class=p>{</span> <span class=k>return</span> <span class=kc>nil</span> <span class=p>}</span>
+    <span class=kd>let</span> <span class=nv>columns</span> <span class=p>=</span> <span class=n>sectionLayoutKind</span><span class=p>.</span><span class=n>columnCount</span>
+
+    <span class=c1>// The group auto-calculates the actual item width to make</span>
+    <span class=c1>// the requested number of columns fit, so this widthDimension is ignored.</span>
+    <span class=kd>let</span> <span class=nv>itemSize</span> <span class=p>=</span> <span class=n>NSCollectionLayoutSize</span><span class=p>(</span><span class=n>widthDimension</span><span class=p>:</span> <span class=p>.</span><span class=n>fractionalWidth</span><span class=p>(</span><span class=mf>1.0</span><span class=p>),</span>
+                                          <span class=n>heightDimension</span><span class=p>:</span> <span class=p>.</span><span class=n>fractionalHeight</span><span class=p>(</span><span class=mf>1.0</span><span class=p>))</span>
+    <span class=kd>let</span> <span class=nv>item</span> <span class=p>=</span> <span class=n>NSCollectionLayoutItem</span><span class=p>(</span><span class=n>layoutSize</span><span class=p>:</span> <span class=n>itemSize</span><span class=p>)</span>
+    <span class=n>item</span><span class=p>.</span><span class=n>contentInsets</span> <span class=p>=</span> <span class=n>NSDirectionalEdgeInsets</span><span class=p>(</span><span class=n>top</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span> <span class=n>leading</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span> <span class=n>bottom</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span> <span class=n>trailing</span><span class=p>:</span> <span class=mi>2</span><span class=p>)</span>
+
+    <span class=kd>let</span> <span class=nv>groupHeight</span> <span class=p>=</span> <span class=n>columns</span> <span class=p>==</span> <span class=mi>1</span> <span class=p>?</span>
+        <span class=n>NSCollectionLayoutDimension</span><span class=p>.</span><span class=n>absolute</span><span class=p>(</span><span class=mi>44</span><span class=p>)</span> <span class=p>:</span>
+        <span class=n>NSCollectionLayoutDimension</span><span class=p>.</span><span class=n>fractionalWidth</span><span class=p>(</span><span class=mf>0.2</span><span class=p>)</span>
+        <span class=c1>// Element height takes 20% of section width</span>
+    <span class=kd>let</span> <span class=nv>groupSize</span> <span class=p>=</span> <span class=n>NSCollectionLayoutSize</span><span class=p>(</span><span class=n>widthDimension</span><span class=p>:</span> <span class=p>.</span><span class=n>fractionalWidth</span><span class=p>(</span><span class=mf>1.0</span><span class=p>),</span>
+                                                  <span class=n>heightDimension</span><span class=p>:</span> <span class=n>groupHeight</span><span class=p>)</span>
+    <span class=kd>let</span> <span class=nv>group</span> <span class=p>=</span> <span class=n>NSCollectionLayoutGroup</span><span class=p>.</span><span class=n>horizontal</span><span class=p>(</span><span class=n>layoutSize</span><span class=p>:</span> <span class=n>groupSize</span><span class=p>,</span> <span class=n>subitem</span><span class=p>:</span> <span class=n>item</span><span class=p>,</span> <span class=bp>count</span><span class=p>:</span> <span class=n>columns</span><span class=p>)</span>
+
+    <span class=kd>let</span> <span class=nv>section</span> <span class=p>=</span> <span class=n>NSCollectionLayoutSection</span><span class=p>(</span><span class=n>group</span><span class=p>:</span> <span class=n>group</span><span class=p>)</span>
+    <span class=n>section</span><span class=p>.</span><span class=n>contentInsets</span> <span class=p>=</span> <span class=n>NSDirectionalEdgeInsets</span><span class=p>(</span><span class=n>top</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span> <span class=n>leading</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span> <span class=n>bottom</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span> <span class=n>trailing</span><span class=p>:</span> <span class=mi>20</span><span class=p>)</span>
+    <span class=n>section</span><span class=p>.</span><span class=n>contentInsetsReference</span> <span class=p>=</span> <span class=p>.</span><span class=n>readableContent</span>
+    <span class=k>return</span> <span class=n>section</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>Layout Environment</strong> с размерами и трейтами позволит менять layout. Например, в несколько колонок на айпад. Пример — <code>AdaptiveSectionsViewController</code></li>
+<li><strong>Отношение к отступам</strong> от родных layout margins/readable guide. Настройка у <code>NSCollectionLayoutSection</code></li>
+<li><strong>Поведение скролла</strong> можно контролировать у секции. Например, с остановкой у leading границы элемента. <code>OrthogonalScrollBehaviorViewController</code></li>
+</ul>
+<h3 id=cell-configuration>
+<a href=#cell-configuration class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Cell Configuration
+</h3>
+<p>У <a href=https://developer.apple.com/documentation/uikit/uicollectionviewcell>UICollectionViewCell</a> можно по новой управлять свойствами.
+<a href=https://developer.apple.com/documentation/uikit/uicollectionviewcell/3600949-contentconfiguration>contentConfiguration</a> настраивает контент (текст, accessory</p>
+<p>List Cell для Expandable/Collapsible sections. Позволяет изменять indentation (отступ слева)
+<a href=https://developer.apple.com/documentation/uikit/uicollectionviewlistcell>UICollectionViewListCell</a></p>
+<h2 id=хорошие-новости-для-вовы>
+<a href=#%d1%85%d0%be%d1%80%d0%be%d1%88%d0%b8%d0%b5-%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8-%d0%b4%d0%bb%d1%8f-%d0%b2%d0%be%d0%b2%d1%8b class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Хорошие новости для Вовы
+</h2>
+<h4 id=тень-для-всей-секции-insetgrouped-элементов-или-рамка>
+<a href=#%d1%82%d0%b5%d0%bd%d1%8c-%d0%b4%d0%bb%d1%8f-%d0%b2%d1%81%d0%b5%d0%b9-%d1%81%d0%b5%d0%ba%d1%86%d0%b8%d0%b8-insetgrouped-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2-%d0%b8%d0%bb%d0%b8-%d1%80%d0%b0%d0%bc%d0%ba%d0%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Тень для всей секции insetGrouped элементов. Или рамка.
+</h4>
+<p>Изи!
+<img loading=lazy src=/collections/2.png alt width=1170 height=2532>
+<code>SectionBackgroundDecorationView</code> в примере.</p>
+<h4 id=прилипающие-хедерыфутеры-секций>
+<a href=#%d0%bf%d1%80%d0%b8%d0%bb%d0%b8%d0%bf%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%85%d0%b5%d0%b4%d0%b5%d1%80%d1%8b%d1%84%d1%83%d1%82%d0%b5%d1%80%d1%8b-%d1%81%d0%b5%d0%ba%d1%86%d0%b8%d0%b9 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Прилипающие хедеры/футеры секций
+</h4>
+<p>Изи!
+<img loading=lazy src=/collections/3.png alt width=1170 height=2532>
+<code>PinnedSectionHeaderFooterViewController</code> в примере.</p>
+<h4 id=пагинация-при-скролле>
+<a href=#%d0%bf%d0%b0%d0%b3%d0%b8%d0%bd%d0%b0%d1%86%d0%b8%d1%8f-%d0%bf%d1%80%d0%b8-%d1%81%d0%ba%d1%80%d0%be%d0%bb%d0%bb%d0%b5 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Пагинация при скролле
+</h4>
+<p><img loading=lazy src=/collections/4.png alt width=1668 height=2388>
+<code>OrthogonalScrollBehaviorViewController</code> в примере</p>
+</div>
+</article>
+</div>
+<div class=container>
+<nav class="flex container suggested">
+</nav>
+</div>
+<div class=container></div>
+</main>
+<footer class="footer flex">
+<section class=container>
+<nav class=footer-links>
+<a href=/index.xml>RSS</a>
+</nav>
+</section>
+<script defer src=/ts/features.39c567b3af1363f8abe74bfd650f3d58cb963716b7ad4b3b53f801d3ca585599.js data-enable-footnotes=true></script>
+</footer>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js></script>
+<script>tocbot.init({tocSelector:".toc",contentSelector:".article-post",headingSelector:"h2, h3, h4"})</script>
+</body>
+</html>

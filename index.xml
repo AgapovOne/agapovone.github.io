@@ -1,3 +1,230 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>agapov.one</title><link>https://agapovone.github.io/</link><description>Recent content on agapov.one</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Wed, 21 Jul 2021 10:49:14 +0500</lastBuildDate><atom:link href="https://agapovone.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About Me</title><link>https://agapovone.github.io/about/</link><pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate><guid>https://agapovone.github.io/about/</guid><description>Contact me on twitter</description></item><item><title>Modern Collection Views</title><link>https://agapovone.github.io/blog/moderncollection/</link><pubDate>Wed, 21 Jul 2021 10:49:14 +0500</pubDate><guid>https://agapovone.github.io/blog/moderncollection/</guid><description>source от Apple
-iOS 14+ для реализации всех фич. В iOS 13 ввели diffable data source. В iOS 14 появился compositional layout, реализующий все возможности таблиц и улучшающий коллекции.
-Почему не таблица? Горизонтальный скролл Удобно конфигурировать state. highlighted/selected/disabled Что позволяет делать? Collapsible/Expandable Sections Секции с разным layout. inset grouped, sidebar (iPad-related), horizontal scroll, columns. Главные фичи Data source Data-driven работает через… RxDataSources? DifferenceKit? Native! Собираем snapshot, применяем.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Agapov Alexey</title><link>https://agapovone.github.io/</link><description>Recent content on Agapov Alexey</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 21 Jul 2021 10:49:14 +0500</lastBuildDate><atom:link href="https://agapovone.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Modern Collection Views</title><link>https://agapovone.github.io/articles/moderncollection/</link><pubDate>Wed, 21 Jul 2021 10:49:14 +0500</pubDate><guid>https://agapovone.github.io/articles/moderncollection/</guid><description>
+&lt;p>&lt;a href="https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views">source от Apple&lt;/a>&lt;/p>
+&lt;p>iOS 14+ для реализации всех фич.
+В iOS 13 ввели diffable data source.
+В iOS 14 появился compositional layout, реализующий все возможности таблиц и улучшающий коллекции.&lt;/p>
+&lt;h3 id="почему-не-таблица">
+&lt;a href="#%d0%bf%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%bd%d0%b5-%d1%82%d0%b0%d0%b1%d0%bb%d0%b8%d1%86%d0%b0" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Почему не таблица?
+&lt;/h3>
+&lt;ul>
+&lt;li>Горизонтальный скролл&lt;/li>
+&lt;li>Удобно конфигурировать state. highlighted/selected/disabled&lt;/li>
+&lt;/ul>
+&lt;h3 id="что-позволяет-делать">
+&lt;a href="#%d1%87%d1%82%d0%be-%d0%bf%d0%be%d0%b7%d0%b2%d0%be%d0%bb%d1%8f%d0%b5%d1%82-%d0%b4%d0%b5%d0%bb%d0%b0%d1%82%d1%8c" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Что позволяет делать?
+&lt;/h3>
+&lt;ul>
+&lt;li>Collapsible/Expandable Sections&lt;/li>
+&lt;li>Секции с разным layout. inset grouped, sidebar (iPad-related), horizontal scroll, columns.&lt;/li>
+&lt;/ul>
+&lt;h2 id="главные-фичи">
+&lt;a href="#%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d1%8b%d0%b5-%d1%84%d0%b8%d1%87%d0%b8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Главные фичи
+&lt;/h2>
+&lt;h3 id="data-source">
+&lt;a href="#data-source" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Data source
+&lt;/h3>
+&lt;p>Data-driven работает через… RxDataSources? DifferenceKit? Native!
+Собираем snapshot, применяем.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-swift" data-lang="swift">&lt;span class="kd">var&lt;/span> &lt;span class="nv">snapshot&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">NSDiffableDataSourceSnapshot&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">Section&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">Int&lt;/span>&lt;span class="p">&amp;gt;()&lt;/span>
+&lt;span class="n">snapshot&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">appendSections&lt;/span>&lt;span class="p">([.&lt;/span>&lt;span class="n">main&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">snapshot&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">appendItems&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">0.&lt;/span>&lt;span class="p">.&amp;lt;&lt;/span>&lt;span class="mi">94&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="n">dataSource&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">snapshot&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">animatingDifferences&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Data source — конфигурация с cellRegistration&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-swift" data-lang="swift">&lt;span class="kd">let&lt;/span> &lt;span class="nv">cellRegistration&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">UICollectionView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CellRegistration&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">TextCell&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">Int&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">cell&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">indexPath&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">identifier&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">in&lt;/span>
+&lt;span class="c1">// Populate the cell with our item description.&lt;/span>
+&lt;span class="n">cell&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">label&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">text&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s">&amp;#34;&lt;/span>&lt;span class="si">\(&lt;/span>&lt;span class="n">identifier&lt;/span>&lt;span class="si">)&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">dataSource&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">UICollectionViewDiffableDataSource&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">Section&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">Int&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="n">collectionView&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">collectionView&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="n">collectionView&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">UICollectionView&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">indexPath&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">IndexPath&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">identifier&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">Int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">-&amp;gt;&lt;/span> &lt;span class="n">UICollectionViewCell&lt;/span>&lt;span class="p">?&lt;/span> &lt;span class="k">in&lt;/span>
+&lt;span class="c1">// Return the cell.&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">collectionView&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">dequeueConfiguredReusableCell&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">using&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">cellRegistration&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">for&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">indexPath&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">item&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">identifier&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Есть одна проблемка с native data source. Он постоянно будет удалять и затем добавлять новую ячейку, не делая reload данных на месте (&lt;a href="https://github.com/ekazaev/ChatLayout#about-uicollectionviewdiffabledatasource">тут говорят&lt;/a>).
+&lt;a href="https://github.com/ra1028/DifferenceKit">DifferenceKit&lt;/a> позволяет это делать, поддерживает перезагрузку. Бенчмарки этой либы говорят, что она самая быстрая среди всех похожих либ. Хорошая либа
+Но для использования с новым API cellRegistration нужно использовать native Data source&lt;/p>
+&lt;h3 id="layout-для-сложных-экранов">
+&lt;a href="#layout-%d0%b4%d0%bb%d1%8f-%d1%81%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d1%85-%d1%8d%d0%ba%d1%80%d0%b0%d0%bd%d0%be%d0%b2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Layout для сложных экранов
+&lt;/h3>
+&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/collections/1.png" alt="" width=1170 height="2532" />
+&lt;code>DistinctSectionsViewController&lt;/code> как пример разных layout для разных секций.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-swift" data-lang="swift">&lt;span class="kd">let&lt;/span> &lt;span class="nv">layout&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">UICollectionViewCompositionalLayout&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">sectionIndex&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">Int&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="n">layoutEnvironment&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">NSCollectionLayoutEnvironment&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">-&amp;gt;&lt;/span> &lt;span class="n">NSCollectionLayoutSection&lt;/span>&lt;span class="p">?&lt;/span> &lt;span class="k">in&lt;/span>
+&lt;span class="k">guard&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nv">sectionLayoutKind&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">SectionLayoutKind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rawValue&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">sectionIndex&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nv">columns&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">sectionLayoutKind&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">columnCount&lt;/span>
+&lt;span class="c1">// The group auto-calculates the actual item width to make&lt;/span>
+&lt;span class="c1">// the requested number of columns fit, so this widthDimension is ignored.&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nv">itemSize&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">NSCollectionLayoutSize&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">widthDimension&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="n">fractionalWidth&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="n">heightDimension&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="n">fractionalHeight&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nv">item&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">NSCollectionLayoutItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">layoutSize&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">itemSize&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">contentInsets&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">NSDirectionalEdgeInsets&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">leading&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">trailing&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nv">groupHeight&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">columns&lt;/span> &lt;span class="p">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">?&lt;/span>
+&lt;span class="n">NSCollectionLayoutDimension&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">absolute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">44&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">:&lt;/span>
+&lt;span class="n">NSCollectionLayoutDimension&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">fractionalWidth&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">0.2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="c1">// Element height takes 20% of section width&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nv">groupSize&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">NSCollectionLayoutSize&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">widthDimension&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="n">fractionalWidth&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">1.0&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="n">heightDimension&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">groupHeight&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nv">group&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">NSCollectionLayoutGroup&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">horizontal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">layoutSize&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">groupSize&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">subitem&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="bp">count&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">columns&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nv">section&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">NSCollectionLayoutSection&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">group&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">group&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">section&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">contentInsets&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">NSDirectionalEdgeInsets&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">leading&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">trailing&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">section&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">contentInsetsReference&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="n">readableContent&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">section&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;strong>Layout Environment&lt;/strong> с размерами и трейтами позволит менять layout. Например, в несколько колонок на айпад. Пример — &lt;code>AdaptiveSectionsViewController&lt;/code>&lt;/li>
+&lt;li>&lt;strong>Отношение к отступам&lt;/strong> от родных layout margins/readable guide. Настройка у &lt;code>NSCollectionLayoutSection&lt;/code>&lt;/li>
+&lt;li>&lt;strong>Поведение скролла&lt;/strong> можно контролировать у секции. Например, с остановкой у leading границы элемента. &lt;code>OrthogonalScrollBehaviorViewController&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="cell-configuration">
+&lt;a href="#cell-configuration" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Cell Configuration
+&lt;/h3>
+&lt;p>У &lt;a href="https://developer.apple.com/documentation/uikit/uicollectionviewcell">UICollectionViewCell&lt;/a> можно по новой управлять свойствами.
+&lt;a href="https://developer.apple.com/documentation/uikit/uicollectionviewcell/3600949-contentconfiguration">contentConfiguration&lt;/a> настраивает контент (текст, accessory&lt;/p>
+&lt;p>List Cell для Expandable/Collapsible sections. Позволяет изменять indentation (отступ слева)
+&lt;a href="https://developer.apple.com/documentation/uikit/uicollectionviewlistcell">UICollectionViewListCell&lt;/a>&lt;/p>
+&lt;h2 id="хорошие-новости-для-вовы">
+&lt;a href="#%d1%85%d0%be%d1%80%d0%be%d1%88%d0%b8%d0%b5-%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8-%d0%b4%d0%bb%d1%8f-%d0%b2%d0%be%d0%b2%d1%8b" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Хорошие новости для Вовы
+&lt;/h2>
+&lt;h4 id="тень-для-всей-секции-insetgrouped-элементов-или-рамка">
+&lt;a href="#%d1%82%d0%b5%d0%bd%d1%8c-%d0%b4%d0%bb%d1%8f-%d0%b2%d1%81%d0%b5%d0%b9-%d1%81%d0%b5%d0%ba%d1%86%d0%b8%d0%b8-insetgrouped-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2-%d0%b8%d0%bb%d0%b8-%d1%80%d0%b0%d0%bc%d0%ba%d0%b0" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Тень для всей секции insetGrouped элементов. Или рамка.
+&lt;/h4>
+&lt;p>Изи!
+&lt;img loading="lazy" src="https://agapovone.github.io/collections/2.png" alt="" width=1170 height="2532" />
+&lt;code>SectionBackgroundDecorationView&lt;/code> в примере.&lt;/p>
+&lt;h4 id="прилипающие-хедерыфутеры-секций">
+&lt;a href="#%d0%bf%d1%80%d0%b8%d0%bb%d0%b8%d0%bf%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%85%d0%b5%d0%b4%d0%b5%d1%80%d1%8b%d1%84%d1%83%d1%82%d0%b5%d1%80%d1%8b-%d1%81%d0%b5%d0%ba%d1%86%d0%b8%d0%b9" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Прилипающие хедеры/футеры секций
+&lt;/h4>
+&lt;p>Изи!
+&lt;img loading="lazy" src="https://agapovone.github.io/collections/3.png" alt="" width=1170 height="2532" />
+&lt;code>PinnedSectionHeaderFooterViewController&lt;/code> в примере.&lt;/p>
+&lt;h4 id="пагинация-при-скролле">
+&lt;a href="#%d0%bf%d0%b0%d0%b3%d0%b8%d0%bd%d0%b0%d1%86%d0%b8%d1%8f-%d0%bf%d1%80%d0%b8-%d1%81%d0%ba%d1%80%d0%be%d0%bb%d0%bb%d0%b5" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Пагинация при скролле
+&lt;/h4>
+&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/collections/4.png" alt="" width=1668 height="2388" />
+&lt;code>OrthogonalScrollBehaviorViewController&lt;/code> в примере&lt;/p></description></item></channel></rss>
