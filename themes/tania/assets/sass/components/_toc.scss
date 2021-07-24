@@ -1,22 +1,31 @@
 .toc {
-  background: #fefefe;
-  width: 200px;
+  // background: #fefefe;
+  width: 300px;
   position: fixed;
-  border: 1px solid #ddd;
-  color: #333;
+  margin-left: -300px;
+  // border: 1px solid #ddd;
+  // color: var(--link-color);
+  line-height: 2;
+}
+.toc li {
+  list-style-type: none;
 }
 .toc a {
-  color: #333;
+  color: var(--font-color);
 }
 .toc .toc-h2 {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 .toc .toc-h3 {
-  margin-left: 20px;
+  margin-left: 12px;
+}
+.toc .toc-h4 {
+  margin-left: 16px;
 }
 .toc-visible {
-  color: #000;
   font-weight: bold;
+  border-left: 4px solid var(--heading-color);
+  padding-left: 6px;
 }
 .toc.right {
   right: 0;
