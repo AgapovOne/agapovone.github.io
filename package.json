@@ -25,5 +25,9 @@
     "> 1%",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "@firstandthird/toc": "^2.1.0",
+    "import": "^0.0.6"
+  }
 }

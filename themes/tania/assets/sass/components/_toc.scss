@@ -1,0 +1,23 @@
+.toc {
+  background: #fefefe;
+  width: 200px;
+  position: fixed;
+  border: 1px solid #ddd;
+  color: #333;
+}
+.toc a {
+  color: #333;
+}
+.toc .toc-h2 {
+  margin-left: 10px;
+}
+.toc .toc-h3 {
+  margin-left: 20px;
+}
+.toc-visible {
+  color: #000;
+  font-weight: bold;
+}
+.toc.right {
+  right: 0;
+}

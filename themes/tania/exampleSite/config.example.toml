@@ -1,14 +1,14 @@
-baseurl = "https://agapovone.github.io"
+baseurl = "https://example.com"
 languageCode = "en-us"
-title = "Agapov Alexey"
-theme = "tania"
+title = "Hugo Tania"
+theme = "hugo-tania"
 paginate = 6
 
 disqusShortname = "https-hugo-tania-netlify-app"
 
 [params]
   # Emoji will show before the blog title on site navbar.
-  titleEmoji  = "🤯"
+  titleEmoji  = "😎"
 
   # Logo will show before the blog title on site navbar.
   titleLogo = ""
@@ -16,9 +16,9 @@ disqusShortname = "https-hugo-tania-netlify-app"
   # Enable float footnotes.
   # Default to true
   enableFootnotes = true
-  siteName = "Alexey Agapov blog"
-  siteDesc = "iOS and nothing else."
-  author = "Alexey Agapov"
+  siteName = "Hugo Tania is Amazing"
+  siteDesc = "Hugo is Absurdly Fast!"
+  author = "Hugo Tania"
 
   # Limit how many categories filter show above search input.
   # Default to 5
@@ -36,19 +36,19 @@ disqusShortname = "https-hugo-tania-netlify-app"
     stack-overflow = ""
     steam = ""
     telegram = ""
-    twitter = "https://twitter.com/agapov_one"
+    twitter = ""
     twitch = ""
     whatsapp = ""
-
+  
   # Comments settigns
-  # [params.comments]
-    # enabled = true
-    # provider = "disqus"
+  [params.comments]
+    enabled = true
+    provider = "disqus"
 
 [menu]
 [[menu.header]]
-  name = "Blog"
-  url = "/blog/"
+  name = "Articles"
+  url = "/articles/"
 [[menu.footer]]
     name = "RSS"
     url = "/index.xml"
