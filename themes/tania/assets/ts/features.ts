@@ -1,6 +1,6 @@
 import ThemeColorScheme from "ts/colorScheme";
 import { renderFootnotes } from "ts/footnotes";
-import Toc from "@firstandthird/toc";
+// import * as tocbot from "tocbot";
 
 let enableFootnotes = false;
 if (document.currentScript) {
@@ -12,7 +12,7 @@ const init = () => {
   if (enableFootnotes) {
     renderFootnotes();
   }
-  Toc();
+  // console.log(tocbot);
 };
 
 window.addEventListener("load", () => {

@@ -8,7 +8,7 @@
 
     {{ template "_internal/google_analytics.html" . }}
     {{ template "_internal/google_analytics_async.html" . }}
-    
+
     <meta property="og:site_name" content="{{.Site.Params.siteName}}" />
     <meta property="og:title" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"/>
     <meta itemprop="name" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}" />
@@ -25,5 +25,6 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
     {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>

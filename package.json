@@ -1,33 +1,25 @@
 {
-  "name": "blist",
-  "version": "1.2.0",
-  "description": "Blist is a clean and fast blog theme for your Hugo site.",
+  "name": "agapov-blog",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/apvarun/blist-hugo-theme",
-  "author": "Varun A P",
-  "license": "MIT",
-  "scripts": {
-    "start": "hugo --gc",
-    "dev": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
-    "build": "NODE_ENV=production hugo -s exampleSite --themesDir=../.. --gc"
-  },
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.10",
-    "postcss-cli": "^8.3.1",
-    "postcss-import": "^14.0.1",
-    "tailwindcss": "^2.1.1"
-  },
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
-  ],
   "dependencies": {
-    "@firstandthird/toc": "^2.1.0",
-    "import": "^0.0.6"
-  }
+    "tocbot": "^4.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgapovOne/agapovone.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "hugo"
+  ],
+  "author": "Agapov Alexey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AgapovOne/agapovone.github.io/issues"
+  },
+  "homepage": "https://github.com/AgapovOne/agapovone.github.io#readme"
 }

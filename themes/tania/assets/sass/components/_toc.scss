@@ -1,32 +1,5 @@
 .toc {
-  // background: #fefefe;
-  width: 300px;
   position: fixed;
-  margin-left: -300px;
-  // border: 1px solid #ddd;
-  // color: var(--link-color);
-  line-height: 2;
-}
-.toc li {
-  list-style-type: none;
-}
-.toc a {
-  color: var(--font-color);
-}
-.toc .toc-h2 {
-  margin-left: 8px;
-}
-.toc .toc-h3 {
-  margin-left: 12px;
-}
-.toc .toc-h4 {
-  margin-left: 16px;
-}
-.toc-visible {
-  font-weight: bold;
-  border-left: 4px solid var(--heading-color);
-  padding-left: 6px;
-}
-.toc.right {
-  right: 0;
+  width: 280px;
+  height: 100%;
 }

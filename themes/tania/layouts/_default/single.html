@@ -1,6 +1,6 @@
 {{ define "main" }}
-<div class="container">
-    <article>
+<div class="container flex flex-row">
+    <article class="flex-two-thirds">
         <header class="article-header">
             <div class="thumb">
                 <div>
@@ -23,11 +23,11 @@
                 </div>
             </div>
         </header>
-        <div class="toc" data-toc="h2, h3, h4, h5" data-toc-container="article-post"></div>
         <div class="article-post">
         {{ .Content }}
         </div>
     </article>
+    <nav class="toc toc-right flex-col"></nav>
 </div>
 
 <div class="container">
@@ -55,5 +55,22 @@
 </div>
 {{ end }}
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js">
+</script>
+<script>
+    console.log("hello");
+    console.log(tocbot);
+  tocbot.init({
+     // Where to render the table of contents.
+     tocSelector: ".toc",
+     // Where to grab the headings to build the table of contents.
+     contentSelector: ".article-post",
+     // Which headings to grab inside of the contentSelector element.
+     headingSelector: "h2, h3, h4",
+     // For headings inside relative or absolute positioned containers within content.
+     // hasInnerContainers: true,
+   });
+
+</script>
 
 {{ end }}
