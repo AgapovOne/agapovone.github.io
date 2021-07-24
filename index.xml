@@ -3,7 +3,7 @@
 &lt;p>iOS 14+ для реализации всех фич.
 В iOS 13 ввели diffable data source.
 В iOS 14 появился compositional layout, реализующий все возможности таблиц и улучшающий коллекции.&lt;/p>
-&lt;h3 id="почему-не-таблица">
+&lt;h2 id="почему-не-таблица">
 &lt;a href="#%d0%bf%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%bd%d0%b5-%d1%82%d0%b0%d0%b1%d0%bb%d0%b8%d1%86%d0%b0" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -12,12 +12,12 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 Почему не таблица?
-&lt;/h3>
+&lt;/h2>
 &lt;ul>
 &lt;li>Горизонтальный скролл&lt;/li>
 &lt;li>Удобно конфигурировать state. highlighted/selected/disabled&lt;/li>
 &lt;/ul>
-&lt;h3 id="что-позволяет-делать">
+&lt;h2 id="что-позволяет-делать">
 &lt;a href="#%d1%87%d1%82%d0%be-%d0%bf%d0%be%d0%b7%d0%b2%d0%be%d0%bb%d1%8f%d0%b5%d1%82-%d0%b4%d0%b5%d0%bb%d0%b0%d1%82%d1%8c" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -26,7 +26,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 Что позволяет делать?
-&lt;/h3>
+&lt;/h2>
 &lt;ul>
 &lt;li>Collapsible/Expandable Sections&lt;/li>
 &lt;li>Секции с разным layout. inset grouped, sidebar (iPad-related), horizontal scroll, columns.&lt;/li>
@@ -212,7 +212,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 Хорошие новости для Вовы
 &lt;/h2>
-&lt;h4 id="тень-для-всей-секции-insetgrouped-элементов-или-рамка">
+&lt;h3 id="тень-для-всей-секции-insetgrouped-элементов-или-рамка">
 &lt;a href="#%d1%82%d0%b5%d0%bd%d1%8c-%d0%b4%d0%bb%d1%8f-%d0%b2%d1%81%d0%b5%d0%b9-%d1%81%d0%b5%d0%ba%d1%86%d0%b8%d0%b8-insetgrouped-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2-%d0%b8%d0%bb%d0%b8-%d1%80%d0%b0%d0%bc%d0%ba%d0%b0" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -221,11 +221,11 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 Тень для всей секции insetGrouped элементов. Или рамка.
-&lt;/h4>
+&lt;/h3>
 &lt;p>Изи!
 &lt;img loading="lazy" src="https://agapovone.github.io/collections/2.png" alt="" width=1170 height="2532" />
 &lt;code>SectionBackgroundDecorationView&lt;/code> в примере.&lt;/p>
-&lt;h4 id="прилипающие-хедерыфутеры-секций">
+&lt;h3 id="прилипающие-хедерыфутеры-секций">
 &lt;a href="#%d0%bf%d1%80%d0%b8%d0%bb%d0%b8%d0%bf%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%85%d0%b5%d0%b4%d0%b5%d1%80%d1%8b%d1%84%d1%83%d1%82%d0%b5%d1%80%d1%8b-%d1%81%d0%b5%d0%ba%d1%86%d0%b8%d0%b9" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -234,11 +234,11 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 Прилипающие хедеры/футеры секций
-&lt;/h4>
+&lt;/h3>
 &lt;p>Изи!
 &lt;img loading="lazy" src="https://agapovone.github.io/collections/3.png" alt="" width=1170 height="2532" />
 &lt;code>PinnedSectionHeaderFooterViewController&lt;/code> в примере.&lt;/p>
-&lt;h4 id="пагинация-при-скролле">
+&lt;h3 id="пагинация-при-скролле">
 &lt;a href="#%d0%bf%d0%b0%d0%b3%d0%b8%d0%bd%d0%b0%d1%86%d0%b8%d1%8f-%d0%bf%d1%80%d0%b8-%d1%81%d0%ba%d1%80%d0%be%d0%bb%d0%bb%d0%b5" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -247,6 +247,6 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 Пагинация при скролле
-&lt;/h4>
+&lt;/h3>
 &lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/collections/4.png" alt="" width=1668 height="2388" />
 &lt;code>OrthogonalScrollBehaviorViewController&lt;/code> в примере&lt;/p></description></item></channel></rss>

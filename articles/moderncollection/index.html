@@ -16,7 +16,7 @@
 <meta property="og:description" content="iOS and nothing else.">
 <link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css>
-<link rel=stylesheet href=/sass/main.min.26adcd9d1d593374deb096fe091ece38764589f6324d94d53a2ea02f12bd7068.css>
+<link rel=stylesheet href=/sass/main.min.83724e1b1830bb315bed87d9d94c3ded50709498df140c6fdb3244e01d843a89.css>
 </head> <script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
 <body class=dark>
 <nav class=navbar>
@@ -62,20 +62,20 @@ By Alexey Agapov |
 <p>iOS 14+ для реализации всех фич.
 В iOS 13 ввели diffable data source.
 В iOS 14 появился compositional layout, реализующий все возможности таблиц и улучшающий коллекции.</p>
-<h3 id=почему-не-таблица>
+<h2 id=почему-не-таблица>
 <a href=#%d0%bf%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%bd%d0%b5-%d1%82%d0%b0%d0%b1%d0%bb%d0%b8%d1%86%d0%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 Почему не таблица?
-</h3>
+</h2>
 <ul>
 <li>Горизонтальный скролл</li>
 <li>Удобно конфигурировать state. highlighted/selected/disabled</li>
 </ul>
-<h3 id=что-позволяет-делать>
+<h2 id=что-позволяет-делать>
 <a href=#%d1%87%d1%82%d0%be-%d0%bf%d0%be%d0%b7%d0%b2%d0%be%d0%bb%d1%8f%d0%b5%d1%82-%d0%b4%d0%b5%d0%bb%d0%b0%d1%82%d1%8c class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 Что позволяет делать?
-</h3>
+</h2>
 <ul>
 <li>Collapsible/Expandable Sections</li>
 <li>Секции с разным layout. inset grouped, sidebar (iPad-related), horizontal scroll, columns.</li>
@@ -240,27 +240,27 @@ Cell Configuration
 </a>
 Хорошие новости для Вовы
 </h2>
-<h4 id=тень-для-всей-секции-insetgrouped-элементов-или-рамка>
+<h3 id=тень-для-всей-секции-insetgrouped-элементов-или-рамка>
 <a href=#%d1%82%d0%b5%d0%bd%d1%8c-%d0%b4%d0%bb%d1%8f-%d0%b2%d1%81%d0%b5%d0%b9-%d1%81%d0%b5%d0%ba%d1%86%d0%b8%d0%b8-insetgrouped-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2-%d0%b8%d0%bb%d0%b8-%d1%80%d0%b0%d0%bc%d0%ba%d0%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 Тень для всей секции insetGrouped элементов. Или рамка.
-</h4>
+</h3>
 <p>Изи!
 <img loading=lazy src=/collections/2.png alt width=1170 height=2532>
 <code>SectionBackgroundDecorationView</code> в примере.</p>
-<h4 id=прилипающие-хедерыфутеры-секций>
+<h3 id=прилипающие-хедерыфутеры-секций>
 <a href=#%d0%bf%d1%80%d0%b8%d0%bb%d0%b8%d0%bf%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%85%d0%b5%d0%b4%d0%b5%d1%80%d1%8b%d1%84%d1%83%d1%82%d0%b5%d1%80%d1%8b-%d1%81%d0%b5%d0%ba%d1%86%d0%b8%d0%b9 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 Прилипающие хедеры/футеры секций
-</h4>
+</h3>
 <p>Изи!
 <img loading=lazy src=/collections/3.png alt width=1170 height=2532>
 <code>PinnedSectionHeaderFooterViewController</code> в примере.</p>
-<h4 id=пагинация-при-скролле>
+<h3 id=пагинация-при-скролле>
 <a href=#%d0%bf%d0%b0%d0%b3%d0%b8%d0%bd%d0%b0%d1%86%d0%b8%d1%8f-%d0%bf%d1%80%d0%b8-%d1%81%d0%ba%d1%80%d0%be%d0%bb%d0%bb%d0%b5 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 Пагинация при скролле
-</h4>
+</h3>
 <p><img loading=lazy src=/collections/4.png alt width=1668 height=2388>
 <code>OrthogonalScrollBehaviorViewController</code> в примере</p>
 </div>
