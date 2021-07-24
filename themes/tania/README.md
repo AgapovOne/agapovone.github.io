@@ -9,6 +9,7 @@ A simple theme for bloggers.
 [Example Site](https://hugo-tania.netlify.app/)
 
 ## Introduction
+
 Most of the styles for this theme come from [taniarascia.com](https://github.com/taniarascia/taniarascia.com)
 
 I like it's style, so I transplant it to Hugo.
@@ -70,11 +71,11 @@ Notice: if you want use disqus as comment system in this theme, you need to set 
 ```yaml
 params:
   # Emoji will show before the blog title on site navbar.
-  titleEmoji: '😎'
+  titleEmoji: "😎"
 
   # Logo will show before the blog title on site navbar.
   titleLogo:
-  
+
   # Enable float footnotes.
   # Default to true
   enableFootnotes: true
@@ -83,7 +84,7 @@ params:
   # Default to 5
   maxCategoryToShow: 10
 
-  # Show your socail information with icon on index bio with `_index.md` content.
+  # Show your social information with icon on index bio with `_index.md` content.
   socialOptions:
     dev-to:
     email:
@@ -99,10 +100,10 @@ params:
     twitch:
     whatsapp:
 
-  # Addtional option for meta SEO
+  # Additional option for meta SEO
   siteName:
-  siteDesc: 
-  author: 
+  siteDesc:
+  author:
 
   # Comments settings
   comments:
@@ -145,10 +146,10 @@ katex: true
 ---
 
 Some content...
-
 ```
 
 ## Thanks to
+
 - [hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack) for dark mode switch
 - [hugo-prose](https://github.com/yihui/hugo-prose) for float footnotes
 
