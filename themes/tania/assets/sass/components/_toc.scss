@@ -14,3 +14,10 @@
 .is-active-link::before {
   background-color: var(--link-color);
 }
+a.toc-link {
+  color: var(--light-font-color);
+}
+.toc-link.is-active-link {
+  font-weight: 600;
+  color: var(--font-color);
+}
