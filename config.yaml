@@ -28,8 +28,10 @@ params:
     whatsapp: ""
 menu:
   header:
-    - name: Blog
-      url: /blog/
+    - name: Articles
+      url: /articles/
+    - name: About me
+      url: /about/
   footer:
     - name: RSS
       url: /index.xml

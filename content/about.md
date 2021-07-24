@@ -7,4 +7,6 @@ keywords: ["about", "contact"]
 type: about
 ---
 
+I work at [Kontur](https://kontur.ru)
+
 Contact me on [twitter](https://twitter.com/agapov_one)
