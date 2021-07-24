@@ -1,77 +1,48 @@
 {{ define "main" }}
 <div class="container">
-
-    <article>
-        <nav class="toc toc-right"></nav>
-        <header class="article-header">
-            <div class="thumb">
-                <div>
-                    <h1>{{ .Title }}</h1>
-                    <div class="post-meta">
-                        <div>
-                            {{ $author := .Params.author }}
-                            {{ if eq $author nil }}
-                              {{ $author = .Site.Params.author }}
-                            {{ end }}
-                            By {{ $author  }} | <time>{{ .Date.Format "January 02, 2006" }}</time>
-                            | {{ .ReadingTime }} minutes
-                        </div>
-                        <div class="tags">
-                            {{ range (.GetTerms "tags") }}
-                            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
+  <article>
+    <nav class="toc"></nav>
+    <header class="article-header">
+      <div class="thumb">
+        <div>
+          <h1>{{ .Title }}</h1>
+          <div class="post-meta">
+            <div>
+              {{ $author := .Params.author }} {{ if eq $author nil }} {{ $author
+              = .Site.Params.author }} {{ end }} By {{ $author }} |
+              <time>{{ .Date.Format "January 02, 2006" }}</time>
+              | {{ .ReadingTime }} minutes
             </div>
-        </header>
-        <div class="article-post">
-        {{ .Content }}
+            <div class="tags">
+              {{ range (.GetTerms "tags") }}
+              <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+              {{ end }}
+            </div>
+          </div>
         </div>
-    </article>
+      </div>
+    </header>
+    <div class="article-post">{{ .Content }}</div>
+  </article>
 </div>
 
 <div class="container">
-    {{ if .Section }}
-    <nav class="flex container suggested">
-        {{ with .PrevInSection }}
-        <a rel="prev" href="{{ .RelPermalink }}" title="Previous post (older)">
-            <span>Previous</span>
-            {{ .Title }}
-            </a>
-        {{ end }}
-
-        {{ with .NextInSection }}
-        <a rel="next" href="{{ .RelPermalink }}" title="Next post (newer)">
-            <span>Next</span>
-            {{ .Title }}
-            </a>
-        {{ end }}
-    </nav>
+  {{ if .Section }}
+  <nav class="flex container suggested">
+    {{ with .PrevInSection }}
+    <a rel="prev" href="{{ .RelPermalink }}" title="Previous post (older)">
+      <span>Previous</span>
+      {{ .Title }}
+    </a>
+    {{ end }} {{ with .NextInSection }}
+    <a rel="next" href="{{ .RelPermalink }}" title="Next post (newer)">
+      <span>Next</span>
+      {{ .Title }}
+    </a>
     {{ end }}
+  </nav>
+  {{ end }}
 </div>
 {{ if or (not (isset .Params "comments")) (eq .Params.comments "true")}}
-<div class="container">
-    {{ partial "comments/include" . }}
-</div>
-{{ end }}
-</main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js">
-</script>
-<script>
-    console.log("hello");
-    console.log(tocbot);
-  tocbot.init({
-     // Where to render the table of contents.
-     tocSelector: ".toc",
-     // Where to grab the headings to build the table of contents.
-     contentSelector: ".article-post",
-     // Which headings to grab inside of the contentSelector element.
-     headingSelector: "h2, h3, h4",
-     // For headings inside relative or absolute positioned containers within content.
-     // hasInnerContainers: true,
-   });
-
-</script>
-
-{{ end }}
+<div class="container">{{ partial "comments/include" . }}</div>
+{{ end }} {{ end }}

@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-    {{ partial "head/head" . }}
-    {{ partial "head/colorScheme" . }}
+  {{ partial "head/head" . }} {{ partial "head/colorScheme" . }}
 
-    <body class="dark">
-        {{ partial "header.html" . }}
-        <main>
-            {{ block "main" . }}{{ end }}
-        </main>
-        {{ partial "footer.html" . }}
-    </body>
+  <body class="dark">
+    {{ partial "header.html" . }}
+    <main>{{ block "main" . }}{{ end }}</main>
+    {{ partial "footer.html" . }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script>
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: ".toc",
+        // Where to grab the headings to build the table of contents.
+        contentSelector: ".article-post",
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: "h2, h3, h4",
+      });
+    </script>
+  </body>
 </html>
