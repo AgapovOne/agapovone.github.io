@@ -10,3 +10,7 @@
     display: block;
   }
 }
+
+.is-active-link::before {
+  background-color: var(--link-color);
+}

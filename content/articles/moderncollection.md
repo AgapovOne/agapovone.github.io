@@ -25,7 +25,7 @@ iOS 14+ для реализации всех фич.
 ### Data source
 
 Data-driven работает через… RxDataSources? DifferenceKit? Native!
-Собираем snapshot, применяем.
+Собираем `NSDiffableDataSourceSnapshot`, применяем.
 
 ```swift
 var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
@@ -38,13 +38,18 @@ Data source — конфигурация с cellRegistration
 
 ```swift
 let cellRegistration = UICollectionView.CellRegistration<TextCell, Int> { (cell, indexPath, identifier) in
-    // Populate the cell with our item description.
-    cell.label.text = "\(identifier)"
+  // Populate the cell with our item description.
+  cell.label.text = "\(identifier)"
 }
-dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
-(collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
-    // Return the cell.
-    return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
+dataSource = UICollectionViewDiffableDataSource<Section, Int>(
+  collectionView: collectionView
+) { (
+  collectionView: UICollectionView,
+  indexPath: IndexPath,
+  identifier: Int
+) -> UICollectionViewCell? in
+  // Return the cell.
+  return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
 }
 ```
 
@@ -58,31 +63,37 @@ dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: co
 `DistinctSectionsViewController` как пример разных layout для разных секций.
 
 ```swift
-let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int,
-            layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+let layout = UICollectionViewCompositionalLayout { (
+  sectionIndex: Int,
+  layoutEnvironment: NSCollectionLayoutEnvironment
+  ) -> NSCollectionLayoutSection? in
 
-    guard let sectionLayoutKind = SectionLayoutKind(rawValue: sectionIndex) else { return nil }
-    let columns = sectionLayoutKind.columnCount
+  guard let sectionLayoutKind = SectionLayoutKind(rawValue: sectionIndex) else { return nil }
+  let columns = sectionLayoutKind.columnCount
 
-    // The group auto-calculates the actual item width to make
-    // the requested number of columns fit, so this widthDimension is ignored.
-    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                          heightDimension: .fractionalHeight(1.0))
-    let item = NSCollectionLayoutItem(layoutSize: itemSize)
-    item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+  // The group auto-calculates the actual item width to make
+  // the requested number of columns fit, so this widthDimension is ignored.
+  let itemSize = NSCollectionLayoutSize(
+    widthDimension: .fractionalWidth(1.0),
+    heightDimension: .fractionalHeight(1.0)
+  )
+  let item = NSCollectionLayoutItem(layoutSize: itemSize)
+  item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
 
-    let groupHeight = columns == 1 ?
-        NSCollectionLayoutDimension.absolute(44) :
-        NSCollectionLayoutDimension.fractionalWidth(0.2)
-        // Element height takes 20% of section width
-    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                  heightDimension: groupHeight)
-    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
+  let groupHeight = columns == 1 ?
+    NSCollectionLayoutDimension.absolute(44) :
+    NSCollectionLayoutDimension.fractionalWidth(0.2)
+    // Element height takes 20% of section width
+  let groupSize = NSCollectionLayoutSize(
+    widthDimension: .fractionalWidth(1.0),
+    heightDimension: groupHeight
+  )
+  let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
 
-    let section = NSCollectionLayoutSection(group: group)
-    section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
-    section.contentInsetsReference = .readableContent
-    return section
+  let section = NSCollectionLayoutSection(group: group)
+  section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+  section.contentInsetsReference = .readableContent
+  return section
 }
 ```
 
