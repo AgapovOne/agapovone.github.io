@@ -42,8 +42,8 @@
 <div class="container">
   <section>
     <h2>
-      Последние статьи
-      <a class="section-button" href="/articles">Открыть все</a>
+      Last articles
+      <a class="section-button" href="/articles">Show all</a>
     </h2>
     <div class="posts">
       {{ range $pages.Pages }}
@@ -52,10 +52,10 @@
           <div class="post-row">
             <time>{{ .Date.Format "Jan 02" }}</time>
             <h3>{{ .Title }}</h3>
+            {{- if .Params.New }}
+            <div class="new-post">New!</div>
+            {{ end }}
           </div>
-          {{- if .Params.New }}
-          <div class="new-post">Новая!</div>
-          {{ end }}
         </a>
       </div>
       {{ end }}
@@ -63,7 +63,7 @@
   </section>
   {{ if gt (len $projects) 0}}
   <section>
-    <h2>Проекты</h2>
+    <h2>Projects</h2>
     <div class="projects">
       {{ range $projects.ByWeight }}
       <div class="project">
@@ -80,7 +80,7 @@
             class="button"
             target="_blank"
             rel="noreferrer"
-            >Репозиторий</a
+            >Source</a
           >
         </div>
       </div>

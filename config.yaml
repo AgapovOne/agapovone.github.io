@@ -1,6 +1,6 @@
 baseurl: "https://agapovone.github.io"
 languageCode: ru-ru
-title: Агапов Алексей
+title: Agapov Alexey
 theme: tania
 paginate: 6
 
@@ -9,9 +9,9 @@ params:
   titleEmoji: "\U0001F92F"
   titleLogo: ""
   enableFootnotes: true
-  siteName: Блог. Агапов Алексей
-  siteDesc: iOS и пока больше ничего
-  author: Алексей Агапов
+  siteName: Agapov Alexey blog.
+  siteDesc: iOS and nothing else
+  author: Agapov Alexey
   maxCategoryToShow: 10
   socialOptions:
     dev-to: ""
@@ -29,12 +29,12 @@ params:
     whatsapp: ""
 menu:
   header:
-    - name: Статьи
+    - name: Articles
       url: /articles/
-    # - name: Теги
+    # - name: Tags
     #   url: /tags/
-    - name: Обо мне
-      url: /about/
+    # - name: About me
+    #   url: /about/
   footer:
     - name: RSS
       url: /index.xml
