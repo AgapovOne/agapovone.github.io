@@ -31,10 +31,10 @@ menu:
   header:
     - name: Статьи
       url: /articles/
-    - name: Теги
-      url: /tags/
-    # - name: About me
-    #   url: /about/
+    # - name: Теги
+    #   url: /tags/
+    - name: Обо мне
+      url: /about/
   footer:
     - name: RSS
       url: /index.xml

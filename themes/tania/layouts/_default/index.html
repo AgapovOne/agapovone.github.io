@@ -43,7 +43,7 @@
   <section>
     <h2>
       Последние статьи
-      <a class="section-button" href="/articles">View all</a>
+      <a class="section-button" href="/articles">Открыть все</a>
     </h2>
     <div class="posts">
       {{ range $pages.Pages }}
@@ -54,7 +54,7 @@
             <h3>{{ .Title }}</h3>
           </div>
           {{- if .Params.New }}
-          <div class="new-post">New!</div>
+          <div class="new-post">Новая!</div>
           {{ end }}
         </a>
       </div>
@@ -80,7 +80,7 @@
             class="button"
             target="_blank"
             rel="noreferrer"
-            >Source</a
+            >Репозиторий</a
           >
         </div>
       </div>

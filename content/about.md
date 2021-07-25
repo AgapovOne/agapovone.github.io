@@ -1,12 +1,12 @@
 ---
 author: Agapov Alexey
-title: About Me
+title: Обо мне
 date: 2021-07-23
 description:
 keywords: ["about", "contact"]
 type: about
 ---
 
-I work at [Kontur](https://kontur.ru)
+Работаю в [Контуре](https://kontur.ru)
 
-Contact me on [twitter](https://twitter.com/agapov_one)
+Пишите мне в [twitter](https://twitter.com/agapov_one)

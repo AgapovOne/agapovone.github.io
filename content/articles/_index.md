@@ -1,4 +1,4 @@
 ---
-author: Agapov Alexey
-title: Articles
+author: Агапов Алексей
+title: Статьи
 ---
