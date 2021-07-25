@@ -1,0 +1,28 @@
+$code-font-size: 0.9rem !default;
+$code-color: #f8f8f2 !default;
+$code-background: #373b41 !default;
+$gray: #cacaca !default;
+$code-font-family: Consolas, Monaco, Menlo, "DejaVu Sans Mono",
+  "Bitstream Vera Sans Mono", "Courier New", monospace !default;
+
+.article-post > code,
+.article-post > pre {
+  font-size: $code-font-size;
+  font-family: $code-font-family;
+  background: $code-background;
+}
+
+:not(pre) > code {
+  color: var(--dark-font-color);
+  background: var(--light-background);
+}
+
+.article-post > code {
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: $code-color;
+}
+
+.article-post > pre > code {
+  display: block;
+}

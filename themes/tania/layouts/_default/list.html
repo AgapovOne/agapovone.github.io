@@ -1,13 +1,11 @@
-{{ define "main" }}
-
-{{ $pages := .Pages }}
-{{ $pages = (.Paginate $pages).Pages }}
+{{ define "main" }} {{ $pages := .Pages }} {{ $pages = (.Paginate $pages).Pages
+}}
 
 <header>
   <div class="container">
     <h1>{{ .Title }}</h1>
     <p class="subtitle">
-      <span class="count">{{ len .Pages }}</span> posts found.
+      Найдено статей: <span class="count">{{ len .Pages }}</span>
     </p>
   </div>
 </header>
@@ -24,7 +22,9 @@
                 <time>{{ .Date.Format "Jan 02" }}</time>
                 <h3>{{ .Title }}</h3>
               </div>
-              <!--<div class="new-post">New!</div>-->
+              {{- if .Params.New }}
+              <div class="new-post">New!</div>
+              {{ end }}
             </a>
           </div>
           {{ end }}
@@ -34,10 +34,8 @@
   </div>
 </section>
 
-{{- $scope := .Site }}
-{{- $paginator := .Paginate (where $scope.RegularPages ".Params.type" "!=" "page") }}
-
-{{- if gt $paginator.TotalPages 1}}
+{{- $scope := .Site }} {{- $paginator := .Paginate (where $scope.RegularPages
+".Params.type" "!=" "page") }} {{- if gt $paginator.TotalPages 1}}
 <section>
   <div class="container">
     <nav class="pagination">
@@ -45,8 +43,7 @@
       <div class="prev-page">
         <a href="{{ $paginator.Prev.URL }}">Previous Page</a>
       </div>
-      {{ end }}
-      {{- if $paginator.HasNext}}
+      {{ end }} {{- if $paginator.HasNext}}
       <div class="next-page">
         <a href="{{ $paginator.Next.URL }}">Next Page</a>
       </div>
@@ -54,6 +51,4 @@
     </nav>
   </div>
 </section>
-{{ end }}
-
-{{ end }}
+{{ end }} {{ end }}

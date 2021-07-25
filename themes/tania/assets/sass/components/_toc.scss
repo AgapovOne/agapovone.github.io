@@ -1,6 +1,10 @@
 .toc {
   display: none;
 }
+nav#TableOfContents {
+  display: block;
+}
+
 // when width of container is 825px
 @media screen and (min-width: 1245px) {
   .toc {
@@ -8,6 +12,10 @@
     width: calc(((100% - 825px) / 2) - 20px);
     left: 10px;
     display: block;
+  }
+
+  nav#TableOfContents {
+    display: none;
   }
 }
 

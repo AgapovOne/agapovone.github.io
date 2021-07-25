@@ -1,37 +1,40 @@
 baseurl: "https://agapovone.github.io"
-languageCode: en-us
-title: Agapov Alexey
+languageCode: ru-ru
+title: Агапов Алексей
 theme: tania
 paginate: 6
 
+defaultContentLanguage: ru
 params:
   titleEmoji: "\U0001F92F"
   titleLogo: ""
   enableFootnotes: true
-  siteName: Alexey Agapov blog
-  siteDesc: iOS and nothing else.
-  author: Alexey Agapov
+  siteName: Блог. Агапов Алексей
+  siteDesc: iOS и пока больше ничего
+  author: Алексей Агапов
   maxCategoryToShow: 10
   socialOptions:
     dev-to: ""
     email: ""
     facebook: ""
-    github: ""
+    github: "https://github.com/AgapovOne"
     instagram: ""
     linkedin: ""
     medium: ""
     stack-overflow: ""
     steam: ""
-    telegram: ""
+    telegram: "http://t.me/agapov_one"
     twitter: "https://twitter.com/agapov_one"
     twitch: ""
     whatsapp: ""
 menu:
   header:
-    - name: Articles
+    - name: Статьи
       url: /articles/
-    - name: About me
-      url: /about/
+    - name: Теги
+      url: /tags/
+    # - name: About me
+    #   url: /about/
   footer:
     - name: RSS
       url: /index.xml
@@ -44,7 +47,7 @@ markup:
     renderer:
       unsafe: true
   tableOfContents:
-    endLevel: 3
+    endLevel: 4
     ordered: false
     startLevel: 2
 outputs:
