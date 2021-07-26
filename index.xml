@@ -60,7 +60,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 Как интегрировать пакеты и что со сборкой на CI
 &lt;/h2>
 &lt;p>Пакеты можно добавлять через &lt;code>File&lt;/code> &amp;gt; &lt;code>Swift Packages&lt;/code>. Поиск по &lt;code>url&lt;/code> пакета. Пакет скачается и попробует построить дерево совместимости.&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/swiftpm/1.png" alt="" width=476 height="912" />&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/swiftpm/versions.png" alt="" width=616 height="158" />&lt;/p>
 &lt;p>&lt;strong>Модули&lt;/strong> выделять стало намного проще. &lt;code>File&lt;/code> &amp;gt; &lt;code>New&lt;/code> &amp;gt; &lt;code>Swift Package&lt;/code>. Добавляя его в репозиторий и проект - появляется понятная структура. Структура повторяет файлы внутри, в отличие от наших обычных проектов. Генерируется папка тестов, автоматом считывается Scheme для билда и тестирования пакета. Зависимости можно объявить в Package.swift&lt;/p>
 &lt;p>&lt;code>swift package&lt;/code> умеет создавать, собирать и запускать модули. Работает из коробки, т.к. поставляется вместе с Xcode.&lt;/p>
 &lt;h2 id="как-структурировать-пакеты-в-swiftpm">
@@ -155,7 +155,11 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>Пакеты начинают резолвиться при открытии Xcode проекта. Если удалить пакеты, то они пропадут и билд не будет их видеть. Тогда нужно воспользоваться меню &lt;code>File&lt;/code> &amp;gt; &lt;code>Swift Packages&lt;/code> &amp;gt; &lt;code>Resolve Package Versions&lt;/code>&lt;/p>
 &lt;p>&lt;strong>Проблемы кэширования&lt;/strong> решаются удалением кэша 😀 Ссылка на него лежит в &lt;code>~/.swiftpm/cache&lt;/code>. Оригинал лежит в &lt;code>~/Library/Caches/org.swift.swiftpm&lt;/code>. Рядом с кэшем Cocoapods.&lt;/p>
 &lt;p>&lt;strong>Проблема совместимости&lt;/strong> с тем, что модули не подходят друг другу решается вручную. Как, например, если мы поставим &lt;a href="https://github.com/ReactiveX/RxSwift">RxSwift&lt;/a> 6.0.0+ и последнюю версию &lt;a href="https://github.com/Moya/Moya/releases/tag/14.0.1">Moya&lt;/a>, которая работает с RxSwift 5.0.0+. Тогда нужно явно указать, что версия RxSwift необходима старая. Автоматически это не решится, но лог пишется понятный.&lt;/p>
-&lt;p>TODO: Зависимости друг на друга&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/swiftpm/dependencies.png" alt="" width=476 height="912" />&lt;/p>
+&lt;p>&lt;strong>Проблема с разными версиями одного пакета&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>Dependencies could not be resolved because root depends on 'Moya' 14.0.1..&amp;lt;15.0.0 and root depends on 'Quick' 4.0.0..&amp;lt;5.0.0.
+'Moya' &amp;gt;= 14.0.1 practically depends on 'Quick' 2.0.0..&amp;lt;3.0.0 because 'Moya' 14.0.1 depends on 'Quick' 2.0.0..&amp;lt;3.0.0 and no versions of 'Moya' match the requirement 14.0.2..&amp;lt;15.0.0.
+&lt;/code>&lt;/pre>&lt;p>TODO: Зависимости друг на друга&lt;/p>
 &lt;h2 id="полезные-ссылки">
 &lt;a href="#%d0%bf%d0%be%d0%bb%d0%b5%d0%b7%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
