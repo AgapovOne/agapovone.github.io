@@ -9,7 +9,7 @@ params:
   titleEmoji: "\U0001F92F"
   titleLogo: ""
   enableFootnotes: true
-  siteName: Agapov Alexey blog.
+  siteName: Agapov Alexey blog
   siteDesc: iOS and nothing else
   author: Agapov Alexey
   maxCategoryToShow: 10
