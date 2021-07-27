@@ -1,10 +1,4 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Agapov Alexey</title><link>https://agapovone.github.io/</link><description>Recent content on Agapov Alexey</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Sun, 25 Jul 2021 10:40:20 +0500</lastBuildDate><atom:link href="https://agapovone.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift Package Manager in 2021</title><link>https://agapovone.github.io/articles/swiftpm/</link><pubDate>Sun, 25 Jul 2021 10:40:20 +0500</pubDate><guid>https://agapovone.github.io/articles/swiftpm/</guid><description>
-&lt;p>&lt;strong>left&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Как писать Package.swift для простого проекта&lt;/li>
-&lt;li>Как тегать версии&lt;/li>
-&lt;li>Как решать проблемы&lt;/li>
-&lt;/ul>
 &lt;h2 id="вопросы">
 &lt;a href="#%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -19,7 +13,8 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;li>Почему стоит уйти с Cocoapods?&lt;/li>
 &lt;li>Как интегрировать пакеты? Что со сборкой на CI?&lt;/li>
 &lt;li>Как структурировать пакеты в SwiftPM&lt;/li>
-&lt;li>Как удобно разрабатывать&lt;/li>
+&lt;li>Как удобно разрабатывать отдельный пакет&lt;/li>
+&lt;li>Как удобно выделять модуль для приложением&lt;/li>
 &lt;li>Как выпускать версии пакетов и библиотек&lt;/li>
 &lt;/ul>
 &lt;h2 id="почему-стоит-уйти-с-cocoapods">
@@ -33,7 +28,45 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 Почему стоит уйти с Cocoapods
 &lt;/h2>
 &lt;p>SwiftPM поддерживает всё, что поддерживает Cocoapods и даже чуть больше.&lt;/p>
-&lt;p>Поддержка ресурсов работает. Пример описан в статье &lt;a href="https://useyourloaf.com/blog/add-resources-to-swift-packages/">useyourloaf&lt;/a>&lt;/p>
+&lt;h3 id="поддержка-ресурсов">
+&lt;a href="#%d0%bf%d0%be%d0%b4%d0%b4%d0%b5%d1%80%d0%b6%d0%ba%d0%b0-%d1%80%d0%b5%d1%81%d1%83%d1%80%d1%81%d0%be%d0%b2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Поддержка ресурсов
+&lt;/h3>
+&lt;p>Работает, начиная с Xcode 12 и Swift 5.3.&lt;/p>
+&lt;p>Ресурсы не обязательно объявлять в Package.swift файле. Например, asset catalogs, xib/storyboard, .lproj файлы будут включены в Bundle автоматически.&lt;/p>
+&lt;blockquote>
+&lt;p>When you add a resource to your Swift package, Xcode detects common resource types for Apple platforms and treats them as a resource automatically. For example, you don’t need to make changes to your package manifest for the following resources:&lt;/p>
+&lt;ul>
+&lt;li>Interface Builder files; for example, XIB files and storyboards&lt;/li>
+&lt;li>Core Data files; for example, xcdatamodeld files&lt;/li>
+&lt;li>Asset catalogs&lt;/li>
+&lt;li>.lproj folders you use to provide localized resources&lt;/li>
+&lt;/ul>
+&lt;p>&lt;cite>&lt;a href="https://developer.apple.com/documentation/swift_packages/bundling_resources_with_a_swift_package">Bundling resources&lt;/a>&lt;/cite>&lt;/p>
+&lt;/blockquote>
+&lt;p>Использовать ресурсы в коде стало проще. Внутри Swift Package Manager пакета мы можем написать просто &lt;code>Bundle.module&lt;/code>.&lt;/p>
+&lt;p>&lt;code>UIImage(named: &amp;quot;some_image&amp;quot;, bundle: .module)&lt;/code>&lt;/p>
+&lt;p>Это работает благодаря флагу SWIFT_PACKAGE, который доступен внутри пакета.&lt;/p>
+&lt;p>Пример добавления ресурсов описан в статье &lt;a href="https://useyourloaf.com/blog/add-resources-to-swift-packages/">useyourloaf&lt;/a>.&lt;/p>
+&lt;p>Подробнее в видео &lt;a href="https://developer.apple.com/wwdc20/10169">WWDC20. Swift packages: Resources and localization&lt;/a>&lt;/p>
+&lt;h3 id="swiftgen-rswift">
+&lt;a href="#swiftgen-rswift" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+SwiftGen, R.swift
+&lt;/h3>
+&lt;p>Работает через Bundle.module.&lt;/p>
+&lt;p>Нет явных шагов для билда ресурсов, как и с обычными пакетами. Кажется, имеет смысл держать рядом папку scripts с cli. И запускать периодически в терминале.&lt;/p>
 &lt;h3 id="умеет-в-версионирование">
 &lt;a href="#%d1%83%d0%bc%d0%b5%d0%b5%d1%82-%d0%b2-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%be%d0%bd%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -49,6 +82,19 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;li>Конкретная версия&lt;/li>
 &lt;li>Конкретная ветка&lt;/li>
 &lt;/ul>
+&lt;h3 id="поддерживает-binary-frameworks">
+&lt;a href="#%d0%bf%d0%be%d0%b4%d0%b4%d0%b5%d1%80%d0%b6%d0%b8%d0%b2%d0%b0%d0%b5%d1%82-binary-frameworks" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Поддерживает binary frameworks
+&lt;/h3>
+&lt;p>Поддержка xcframework нужна для библиотек, у которых мы хотим закрыть исходный код. Или, например, у KMM библиотеки, которая нужна как зависимость.&lt;/p>
+&lt;p>Такие фреймворки ограничены только Apple платформой и теми архитектурами, под которые они собраны. Это может вызывать проблемы при разработке.&lt;/p>
+&lt;p>Подробнее об этих фреймоврках и интеграции в Swift Package Manager в &lt;a href="https://developer.apple.com/wwdc20/10147">видео Distribute binary frameworks as Swift Packages&lt;/a> и &lt;a href="https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages">документации о Binary Frameworks&lt;/a>&lt;/p>
 &lt;h2 id="как-интегрировать-пакеты-и-что-со-сборкой-на-ci">
 &lt;a href="#%d0%ba%d0%b0%d0%ba-%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b8-%d1%87%d1%82%d0%be-%d1%81%d0%be-%d1%81%d0%b1%d0%be%d1%80%d0%ba%d0%be%d0%b9-%d0%bd%d0%b0-ci" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -59,10 +105,31 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 Как интегрировать пакеты и что со сборкой на CI
 &lt;/h2>
+&lt;h3 id="внешние-пакеты-внутри-приложения">
+&lt;a href="#%d0%b2%d0%bd%d0%b5%d1%88%d0%bd%d0%b8%d0%b5-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b2%d0%bd%d1%83%d1%82%d1%80%d0%b8-%d0%bf%d1%80%d0%b8%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Внешние пакеты внутри приложения
+&lt;/h3>
 &lt;p>Пакеты можно добавлять через &lt;code>File&lt;/code> &amp;gt; &lt;code>Swift Packages&lt;/code>. Поиск по &lt;code>url&lt;/code> пакета. Пакет скачается и попробует построить дерево совместимости.&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/swiftpm/versions.png" alt="" width=616 height="158" />&lt;/p>
-&lt;p>&lt;strong>Модули&lt;/strong> выделять стало намного проще. &lt;code>File&lt;/code> &amp;gt; &lt;code>New&lt;/code> &amp;gt; &lt;code>Swift Package&lt;/code>. Добавляя его в репозиторий и проект - появляется понятная структура. Структура повторяет файлы внутри, в отличие от наших обычных проектов. Генерируется папка тестов, автоматом считывается Scheme для билда и тестирования пакета. Зависимости можно объявить в Package.swift&lt;/p>
-&lt;p>&lt;code>swift package&lt;/code> умеет создавать, собирать и запускать модули. Работает из коробки, т.к. поставляется вместе с Xcode.&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/swiftpm/dependencies.png" alt="" width=476 height="912" />&lt;/p>
+&lt;p>&lt;code>swift package&lt;/code> умеет создавать, собирать и запускать модули. Поставляется вместе с Xcode.&lt;/p>
+&lt;p>На CI пакеты резолвятся автоматически при начале сборки, и дополнительных действий делать не нужно.&lt;/p>
+&lt;h3 id="модульное-приложение-на-swift-package-manager">
+&lt;a href="#%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d1%8c%d0%bd%d0%be%d0%b5-%d0%bf%d1%80%d0%b8%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bd%d0%b0-swift-package-manager" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Модульное приложение на Swift Package Manager
+&lt;/h3>
+&lt;p>&lt;strong>Модули&lt;/strong> выделять стало намного проще. &lt;code>File&lt;/code> &amp;gt; &lt;code>New&lt;/code> &amp;gt; &lt;code>Swift Package&lt;/code>. Добавляя его в репозиторий и проект - появляется понятная структура. Она повторяет файлы внутри, в отличие от обычных проектов. Генерируется папка тестов, автоматом считывается Scheme для билда и тестирования пакета. Зависимости такого модуля можно объявить в Package.swift&lt;/p>
 &lt;h2 id="как-структурировать-пакеты-в-swiftpm">
 &lt;a href="#%d0%ba%d0%b0%d0%ba-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b2-swiftpm" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -86,24 +153,25 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 Как удобно разрабатывать
 &lt;/h2>
-&lt;p>Внутри проекта можно собрать такую иерархию файлов:&lt;/p>
+&lt;p>Внутри репозитория пакета можно собрать такую иерархию файлов:&lt;/p>
 &lt;ul>
 &lt;li>📁 Project (git repo)
 &lt;ul>
 &lt;li>📄 Package.swift&lt;/li>
 &lt;li>📄 Package.resolved&lt;/li>
 &lt;li>📄 README.md&lt;/li>
-&lt;li>📁 Sources (folder)
+&lt;li>📁 Sources
 &lt;ul>
-&lt;li>📁 {{PackageName}} (folder)&lt;/li>
+&lt;li>📁 Helpers&lt;/li>
+&lt;li>📁 BigModule&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>📁 Tests (folder)
+&lt;li>📁 Tests
 &lt;ul>
-&lt;li>📁 {{PackageName}}Tests (folder)&lt;/li>
+&lt;li>📁 BigModuleTests (folder)&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>📁 Example (folder)
+&lt;li>📁 Example
 &lt;ul>
 &lt;li>Example.xcodeproj&lt;/li>
 &lt;li>&amp;hellip; any structure of example project&lt;/li>
@@ -142,6 +210,125 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>В таком случае xcworkspace повторяет всю структуру папок, при этом имея все схемы для сборки пакетов + схему для сборки Example проекта.&lt;/p>
+&lt;p>К сожалению, иногда приходится закрыть-открыть workspace. Обычно это проблемы со схемами или резолвом пакетов.&lt;/p>
+&lt;p>&lt;strong>Kontur&lt;/strong>: мы используем такую иерархию в packages-ios.&lt;/p>
+&lt;h3 id="packageswift">
+&lt;a href="#packageswift" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Package.swift
+&lt;/h3>
+&lt;p>&lt;code>// swift-tools-version:5.3&lt;/code> - актуальная версия тулзов. Актуальная фича в этой версии - process/copy ресурсов.&lt;/p>
+&lt;p>&lt;a href="https://docs.swift.org/package-manager/PackageDescription/index.html">API Reference swift.org&lt;/a> — место, где можно посмотреть документацию к каждому вызову внутри Package.swift&lt;/p>
+&lt;p>Про отличие static и dynamic библиотек можно почитать &lt;a href="https://theswiftdev.com/deep-dive-into-swift-frameworks/">в блоге theswiftdev&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code class="language-swift" data-lang="swift">&lt;span style="color:#6272a4">// swift-tools-version:5.3&lt;/span>
+&lt;span style="color:#8be9fd;font-style:italic">import&lt;/span> &lt;span style="color:#50fa7b">PackageDescription&lt;/span>
+&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">package&lt;/span> = Package(
+name: &lt;span style="color:#f1fa8c">&amp;#34;SimplePackage&amp;#34;&lt;/span>,
+platforms: [
+.iOS(.v11) &lt;span style="color:#6272a4">// поддерживает только iOS с версии 11&lt;/span>
+],
+products: [
+.library(
+name: &lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>,
+targets: [&lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>]
+),
+.library(
+name: &lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>,
+targets: [&lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>]
+)
+],
+dependencies: [
+.package(url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/marmelroy/PhoneNumberKit&amp;#34;&lt;/span>, .upToNextMajor(from: &lt;span style="color:#f1fa8c">&amp;#34;3.3.3&amp;#34;&lt;/span>)),
+.package(url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/ReactiveX/RxSwift.git&amp;#34;&lt;/span>, from: &lt;span style="color:#f1fa8c">&amp;#34;5.0.0&amp;#34;&lt;/span>),
+.package(name: &lt;span style="color:#f1fa8c">&amp;#34;Firebase&amp;#34;&lt;/span>, url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/firebase/firebase-ios-sdk.git&amp;#34;&lt;/span>, from: &lt;span style="color:#f1fa8c">&amp;#34;8.0.0&amp;#34;&lt;/span>)
+],
+targets: [
+.target(
+name: &lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>,
+dependencies: [&lt;span style="color:#f1fa8c">&amp;#34;PhoneNumberKit&amp;#34;&lt;/span>]
+),
+.target(
+name: &lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>,
+dependencies: [
+.product(name: &lt;span style="color:#f1fa8c">&amp;#34;FirebaseRemoteConfig&amp;#34;&lt;/span>, package: &lt;span style="color:#f1fa8c">&amp;#34;Firebase&amp;#34;&lt;/span>),
+&lt;span style="color:#f1fa8c">&amp;#34;RxSwift&amp;#34;&lt;/span>,
+.product(name: &lt;span style="color:#f1fa8c">&amp;#34;RxCocoa&amp;#34;&lt;/span>, package: &lt;span style="color:#f1fa8c">&amp;#34;RxSwift&amp;#34;&lt;/span>)
+],
+resources: [.process(&lt;span style="color:#f1fa8c">&amp;#34;Resources&amp;#34;&lt;/span>)] &lt;span style="color:#6272a4">// Resources — папка в Sources/BigModule&lt;/span>
+),
+.testTarget(
+name: &lt;span style="color:#f1fa8c">&amp;#34;BigModuleTests&amp;#34;&lt;/span>,
+dependencies: [&lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>]
+),
+]
+)
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="релизы">
+&lt;a href="#%d1%80%d0%b5%d0%bb%d0%b8%d0%b7%d1%8b" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Релизы
+&lt;/h3>
+&lt;p>Релизы легче, чем в cocoapods, так как централизованного хранилища версий необходимости держать нет. Просто добавляем тег версии по &lt;a href="semver.org">semver&lt;/a>, и пакеты готовы к обновлению.&lt;/p>
+&lt;p>Если хочется выложить пакет в общий доступ и позволить пользователям искать его в общем списке — посмотри на &lt;a href="https://swiftpackageindex.com">Swift Package Index&lt;/a>.&lt;/p>
 &lt;h2 id="как-решать-проблемы">
 &lt;a href="#%d0%ba%d0%b0%d0%ba-%d1%80%d0%b5%d1%88%d0%b0%d1%82%d1%8c-%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -150,16 +337,29 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-Как решать проблемы.
+Как решать проблемы
 &lt;/h2>
 &lt;p>Пакеты начинают резолвиться при открытии Xcode проекта. Если удалить пакеты, то они пропадут и билд не будет их видеть. Тогда нужно воспользоваться меню &lt;code>File&lt;/code> &amp;gt; &lt;code>Swift Packages&lt;/code> &amp;gt; &lt;code>Resolve Package Versions&lt;/code>&lt;/p>
 &lt;p>&lt;strong>Проблемы кэширования&lt;/strong> решаются удалением кэша 😀 Ссылка на него лежит в &lt;code>~/.swiftpm/cache&lt;/code>. Оригинал лежит в &lt;code>~/Library/Caches/org.swift.swiftpm&lt;/code>. Рядом с кэшем Cocoapods.&lt;/p>
 &lt;p>&lt;strong>Проблема совместимости&lt;/strong> с тем, что модули не подходят друг другу решается вручную. Как, например, если мы поставим &lt;a href="https://github.com/ReactiveX/RxSwift">RxSwift&lt;/a> 6.0.0+ и последнюю версию &lt;a href="https://github.com/Moya/Moya/releases/tag/14.0.1">Moya&lt;/a>, которая работает с RxSwift 5.0.0+. Тогда нужно явно указать, что версия RxSwift необходима старая. Автоматически это не решится, но лог пишется понятный.&lt;/p>
-&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/swiftpm/dependencies.png" alt="" width=476 height="912" />&lt;/p>
+&lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/swiftpm/versions.png" alt="" width=616 height="158" />&lt;/p>
 &lt;p>&lt;strong>Проблема с разными версиями одного пакета&lt;/strong>&lt;/p>
-&lt;pre>&lt;code>Dependencies could not be resolved because root depends on 'Moya' 14.0.1..&amp;lt;15.0.0 and root depends on 'Quick' 4.0.0..&amp;lt;5.0.0.
-'Moya' &amp;gt;= 14.0.1 practically depends on 'Quick' 2.0.0..&amp;lt;3.0.0 because 'Moya' 14.0.1 depends on 'Quick' 2.0.0..&amp;lt;3.0.0 and no versions of 'Moya' match the requirement 14.0.2..&amp;lt;15.0.0.
-&lt;/code>&lt;/pre>&lt;p>TODO: Зависимости друг на друга&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code class="language-text" data-lang="text">Dependencies could not be resolved because root depends on &amp;#39;Moya&amp;#39; 14.0.1..&amp;lt;15.0.0 and root depends on &amp;#39;Quick&amp;#39; 4.0.0..&amp;lt;5.0.0.
+&amp;#39;Moya&amp;#39; &amp;gt;= 14.0.1 practically depends on &amp;#39;Quick&amp;#39; 2.0.0..&amp;lt;3.0.0 because &amp;#39;Moya&amp;#39; 14.0.1 depends on &amp;#39;Quick&amp;#39; 2.0.0..&amp;lt;3.0.0 and no versions of &amp;#39;Moya&amp;#39; match the requirement 14.0.2..&amp;lt;15.0.0.
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Не вижу возможного решения в текущей версии, так как Package.swift нельзя выделить отдельно. Думал о том, чтобы Quick с версией другой имел название библиотеки вроде &lt;code>Quick-4&lt;/code>, и тогда бы не должна была ломаться связка. Но как такое решить с текущей интеграцией Xcode - не понятно.&lt;/p>
+&lt;p>Валидные решения на сейчас:&lt;/p>
+&lt;ul>
+&lt;li>выпилить Quick из тестов :)&lt;/li>
+&lt;li>обновить Moya в отдельном репозитории. Версия 15 с поддержкой RxSwift давно готова. Но её не выпускают непонятно почему. Скорее всего, проблема в документации.&lt;/li>
+&lt;/ul>
 &lt;h2 id="полезные-ссылки">
 &lt;a href="#%d0%bf%d0%be%d0%bb%d0%b5%d0%b7%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -172,7 +372,22 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/h2>
 &lt;p>&lt;a href="https://swift.org/package-manager/">Обзор по SwiftPM от Apple&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://docs.swift.org/package-manager/">Документация по API SwiftPM в Package.swift файле&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://swiftpackageindex.com">Публичный список доступных пакетов в SwiftPM&lt;/a>&lt;/p></description></item><item><title>Modern Collection Views</title><link>https://agapovone.github.io/articles/moderncollection/</link><pubDate>Wed, 21 Jul 2021 10:49:14 +0500</pubDate><guid>https://agapovone.github.io/articles/moderncollection/</guid><description>
+&lt;p>&lt;a href="https://developer.apple.com/videos/developer-tools/swift?q=package">Видео WWDC про Swift Packages&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://swiftpackageindex.com">Публичный список доступных пакетов в SwiftPM&lt;/a>&lt;/p>
+&lt;h2 id="left">
+&lt;a href="#left" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+left:
+&lt;/h2>
+&lt;ul>
+&lt;li>Как там с транзитивными зависимостями?&lt;/li>
+&lt;li>По поводу динамичиских, статических либ, фреймворков&lt;/li>
+&lt;/ul></description></item><item><title>Modern Collection Views</title><link>https://agapovone.github.io/articles/moderncollection/</link><pubDate>Wed, 21 Jul 2021 10:49:14 +0500</pubDate><guid>https://agapovone.github.io/articles/moderncollection/</guid><description>
 &lt;p>&lt;a href="https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views">source от Apple&lt;/a>&lt;/p>
 &lt;p>iOS 14+ для реализации всех фич.
 В iOS 13 ввели diffable data source.
