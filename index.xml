@@ -142,6 +142,11 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/h2>
 &lt;p>1 репозиторий = коллекция пакетов.&lt;/p>
 &lt;p>&lt;strong>Executable&lt;/strong> — cli. Удобно разрабатывать с любыми пакетами, которые тоже поддерживают SwiftPM. &lt;a href="https://github.com/apple/swift-argument-parser">swift-argument-parser&lt;/a> — мощь.&lt;/p>
+&lt;p>К сожалению, использовать с SPM SwiftGen/R.swift и любые другие CLI, как это было с Cocoapods - не получится. Валидные решения такие:&lt;/p>
+&lt;ul>
+&lt;li>положить бинарь с утилитой в код проекта и запускать внутри. Будет не очень удобно обновляться, но все остальные удобства останутся.&lt;/li>
+&lt;li>использовать Brewfile/Gemfile для контроля зависимостей. Будет удобно обновлять, но нужно запускать перед билдом brew install/bundle install&lt;/li>
+&lt;/ul>
 &lt;p>&lt;strong>Library&lt;/strong> — библиотека. Может быть как статической, так и динамической.&lt;/p>
 &lt;h2 id="как-удобно-разрабатывать">
 &lt;a href="#%d0%ba%d0%b0%d0%ba-%d1%83%d0%b4%d0%be%d0%b1%d0%bd%d0%be-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%b0%d1%82%d1%8b%d0%b2%d0%b0%d1%82%d1%8c" class="anchor">
@@ -383,21 +388,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>&lt;a href="https://swift.org/package-manager/">Обзор по SwiftPM от Apple&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://docs.swift.org/package-manager/">Документация по API SwiftPM в Package.swift файле&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://developer.apple.com/videos/developer-tools/swift?q=package">Видео WWDC про Swift Packages&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://swiftpackageindex.com">Публичный список доступных пакетов в SwiftPM&lt;/a>&lt;/p>
-&lt;h2 id="left">
-&lt;a href="#left" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-left:
-&lt;/h2>
-&lt;ul>
-&lt;li>Как там с транзитивными зависимостями?&lt;/li>
-&lt;li>По поводу динамичиских, статических либ, фреймворков&lt;/li>
-&lt;/ul></description></item><item><title>Modern Collection Views</title><link>https://agapovone.github.io/articles/moderncollection/</link><pubDate>Wed, 21 Jul 2021 10:49:14 +0500</pubDate><guid>https://agapovone.github.io/articles/moderncollection/</guid><description>
+&lt;p>&lt;a href="https://swiftpackageindex.com">Публичный список доступных пакетов в SwiftPM&lt;/a>&lt;/p></description></item><item><title>Modern Collection Views</title><link>https://agapovone.github.io/articles/moderncollection/</link><pubDate>Wed, 21 Jul 2021 10:49:14 +0500</pubDate><guid>https://agapovone.github.io/articles/moderncollection/</guid><description>
 &lt;p>&lt;a href="https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views">source от Apple&lt;/a>&lt;/p>
 &lt;p>iOS 14+ для реализации всех фич.
 В iOS 13 ввели diffable data source.

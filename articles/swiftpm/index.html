@@ -16,7 +16,7 @@
 <meta property="og:description" content="iOS and nothing else">
 <link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css>
-<link rel=stylesheet href=/sass/main.min.a2026d0bb45841b62575264a2970acd3c189cd38d63b8191e9d299c8afd6449d.css>
+<link rel=stylesheet href=/sass/main.min.d508ac3aca9296514dbfcbf5bd304a882e5bdaff35f3db992290099ddfde2467.css>
 </head> <script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
 <body class=dark>
 <nav class=navbar>
@@ -84,7 +84,6 @@ Agapov Alexey
 </li>
 <li><a href=#как-решать-проблемы>Как решать проблемы</a></li>
 <li><a href=#полезные-ссылки>Полезные ссылки</a></li>
-<li><a href=#left>left:</a></li>
 </ul>
 </nav>
 <div class=article-post><h2 id=вопросы>
@@ -180,6 +179,11 @@ SwiftGen, R.swift
 </h2>
 <p>1 репозиторий = коллекция пакетов.</p>
 <p><strong>Executable</strong> — cli. Удобно разрабатывать с любыми пакетами, которые тоже поддерживают SwiftPM. <a href=https://github.com/apple/swift-argument-parser>swift-argument-parser</a> — мощь.</p>
+<p>К сожалению, использовать с SPM SwiftGen/R.swift и любые другие CLI, как это было с Cocoapods - не получится. Валидные решения такие:</p>
+<ul>
+<li>положить бинарь с утилитой в код проекта и запускать внутри. Будет не очень удобно обновляться, но все остальные удобства останутся.</li>
+<li>использовать Brewfile/Gemfile для контроля зависимостей. Будет удобно обновлять, но нужно запускать перед билдом brew install/bundle install</li>
+</ul>
 <p><strong>Library</strong> — библиотека. Может быть как статической, так и динамической.</p>
 <h2 id=как-удобно-разрабатывать>
 <a href=#%d0%ba%d0%b0%d0%ba-%d1%83%d0%b4%d0%be%d0%b1%d0%bd%d0%be-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%b0%d1%82%d1%8b%d0%b2%d0%b0%d1%82%d1%8c class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
@@ -394,15 +398,6 @@ Package.swift
 <p><a href=https://docs.swift.org/package-manager/>Документация по API SwiftPM в Package.swift файле</a></p>
 <p><a href="https://developer.apple.com/videos/developer-tools/swift?q=package">Видео WWDC про Swift Packages</a></p>
 <p><a href=https://swiftpackageindex.com>Публичный список доступных пакетов в SwiftPM</a></p>
-<h2 id=left>
-<a href=#left class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-left:
-</h2>
-<ul>
-<li>Как там с транзитивными зависимостями?</li>
-<li>По поводу динамичиских, статических либ, фреймворков</li>
-</ul>
 </div>
 <nav id=TableOfContents>
 <ul>
@@ -431,7 +426,6 @@ left:
 </li>
 <li><a href=#как-решать-проблемы>Как решать проблемы</a></li>
 <li><a href=#полезные-ссылки>Полезные ссылки</a></li>
-<li><a href=#left>left:</a></li>
 </ul>
 </nav>
 </article>
