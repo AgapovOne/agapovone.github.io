@@ -85,6 +85,11 @@ SwiftPM поддерживает всё, что поддерживает Cocoapo
 
 **Executable** — cli. Удобно разрабатывать с любыми пакетами, которые тоже поддерживают SwiftPM. [swift-argument-parser](https://github.com/apple/swift-argument-parser) — мощь.
 
+К сожалению, использовать с SPM SwiftGen/R.swift и любые другие CLI, как это было с Cocoapods - не получится. Валидные решения такие:
+
+- положить бинарь с утилитой в код проекта и запускать внутри. Будет не очень удобно обновляться, но все остальные удобства останутся.
+- использовать Brewfile/Gemfile для контроля зависимостей. Будет удобно обновлять, но нужно запускать перед билдом brew install/bundle install
+
 **Library** — библиотека. Может быть как статической, так и динамической.
 
 ## Как удобно разрабатывать
@@ -223,8 +228,3 @@ Dependencies could not be resolved because root depends on 'Moya' 14.0.1..<15.0.
 [Видео WWDC про Swift Packages](https://developer.apple.com/videos/developer-tools/swift?q=package)
 
 [Публичный список доступных пакетов в SwiftPM](https://swiftpackageindex.com)
-
-## left:
-
-- Как там с транзитивными зависимостями?
-- По поводу динамичиских, статических либ, фреймворков
