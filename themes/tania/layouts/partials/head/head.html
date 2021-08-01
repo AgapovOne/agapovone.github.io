@@ -1,30 +1,85 @@
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="dark">
-    <title>{{with.Title}}{{.}} | {{end}}{{.Site.Title}}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="dark" />
+  <title>{{with.Title}}{{.}} | {{end}}{{.Site.Title}}</title>
 
-    {{ template "_internal/google_analytics.html" . }}
-    {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/google_analytics.html" . }} {{ template
+  "_internal/google_analytics_async.html" . }}
 
-    <meta property="og:site_name" content="{{.Site.Params.siteName}}" />
-    <meta property="og:title" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"/>
-    <meta itemprop="name" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}" />
-    <meta name="twitter:title" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}" />
-    <meta name="application-name" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}" />
+  <meta property="og:site_name" content="{{.Site.Params.siteName}}" />
+  <meta
+    property="og:title"
+    content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"
+  />
+  <meta
+    itemprop="name"
+    content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"
+  />
+  <meta
+    name="twitter:title"
+    content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"
+  />
+  <meta
+    name="application-name"
+    content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"
+  />
 
+  <meta
+    name="description"
+    content="{{ if .Description }}{{.Description}}{{ else }}{{.Site.Params.siteDesc}}{{end}}"
+  />
+  <meta
+    name="twitter:description"
+    content="{{ if .Description }}{{.Description}} {{ else }}{{.Site.Params.siteDesc}}{{end}}"
+  />
+  <meta
+    itemprop="description"
+    content="{{ if .Description }} {{.Description}} {{ else }}{{.Site.Params.siteDesc}}{{end}}"
+  />
+  <meta
+    property="og:description"
+    content="{{ if .Description }} {{.Description}} {{ else }}{{.Site.Params.siteDesc}}{{ end }}"
+  />
 
-    <meta name="description" content="{{ if .Description }}{{.Description}}{{ else }}{{.Site.Params.siteDesc}}{{end}}" />
-    <meta name="twitter:description" content="{{ if .Description }}{{.Description}} {{ else }}{{.Site.Params.siteDesc}}{{end}}"/>
-    <meta itemprop="description" content="{{ if .Description }} {{.Description}} {{ else }}{{.Site.Params.siteDesc}}{{end}}"/>
-    <meta property="og:description" content="{{ if .Description }} {{.Description}} {{ else }}{{.Site.Params.siteDesc}}{{ end }}" />
+  {{ partial "post-meta.html" . }} <link rel="shortcut icon" type="image/x-icon"
+  href="{{ "favicon.ico" | relURL }}" /> {{ $style := resources.Get
+  "sass/main.scss" | toCSS | minify | fingerprint }}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"
+  />
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
+      m[i].l = 1 * new Date();
+      (k = e.createElement(t)),
+        (a = e.getElementsByTagName(t)[0]),
+        (k.async = 1),
+        (k.src = r),
+        a.parentNode.insertBefore(k, a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    {{ partial "post-meta.html" . }}
-
-    <link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
-    {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    ym(83528200, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+    });
+  </script>
+  <noscript
+    ><div>
+      <img
+        src="https://mc.yandex.ru/watch/83528200"
+        style="position: absolute; left: -9999px"
+        alt=""
+      /></div
+  ></noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
