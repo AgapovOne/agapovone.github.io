@@ -112,7 +112,7 @@ let layout = UICollectionViewCompositionalLayout { (
 List Cell для Expandable/Collapsible sections. Позволяет изменять indentation (отступ слева)
 [UICollectionViewListCell](https://developer.apple.com/documentation/uikit/uicollectionviewlistcell)
 
-## Хорошие новости для Вовы
+## Хорошие новости для дизайнеров
 
 ### Тень для всей секции insetGrouped элементов. Или рамка.
 
