@@ -91,6 +91,11 @@ header {
     }
   }
 
+  li {
+    list-style-type: square;
+    list-style-position: outside;
+  }
+
   code {
     overflow-x: auto;
   }
