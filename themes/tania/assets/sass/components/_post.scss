@@ -92,12 +92,28 @@ header {
   }
 
   li {
-    list-style-type: square;
-    list-style-position: outside;
+    list-style-type: none;
+  }
+
+  li::before {
+    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--link-color); /* Change the color */
+    font-size: 1.25em;
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 0.75em; /* Also needed for space (tweak if needed) */
+    margin-left: -0.75em; /* Also needed for space (tweak if needed) */
   }
 
   code {
     overflow-x: auto;
+  }
+
+  :not(pre) > code::before {
+    content: "`";
+  }
+  :not(pre) > code::after {
+    content: "`";
   }
 
   @for $i from 1 through 6 {
