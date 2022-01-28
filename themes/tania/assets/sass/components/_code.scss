@@ -15,12 +15,12 @@ $code-font-family: Consolas, Monaco, Menlo, "DejaVu Sans Mono",
 :not(pre) > code {
   color: var(--dark-font-color);
   background: var(--light-background);
+  border: 1px solid lighten($code-color, 50%);
 }
 
 .article-post code {
   padding: 3px 5px;
   border-radius: 8px;
-  border: 1px solid lighten($code-color, 50%);
 }
 
 .article-post > pre > code {
