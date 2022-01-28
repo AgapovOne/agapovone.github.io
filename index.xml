@@ -1,15 +1,4 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Agapov Alexey</title><link>https://agapovone.github.io/</link><description>Recent content on Agapov Alexey</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Sun, 25 Jul 2021 10:40:20 +0500</lastBuildDate><atom:link href="https://agapovone.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift Package Manager in 2021</title><link>https://agapovone.github.io/articles/swiftpm/</link><pubDate>Sun, 25 Jul 2021 10:40:20 +0500</pubDate><guid>https://agapovone.github.io/articles/swiftpm/</guid><description>
-&lt;h2 id="upd-122021">
-&lt;a href="#upd-122021" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-UPD: 12.2021
-&lt;/h2>
-&lt;p>Всё ещё очень долго происходит загрузка пакетов при открытии проекта в Xcode. Если подряд открыть проект несколько раз — то и загрузка будет происходить каждый из этих раз. Это может занимать очень много времени. В Cocoapods же можно было не обновлять и не подтягивать каждый раз пакеты.&lt;/p>
 &lt;h2 id="вопросы">
 &lt;a href="#%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -106,15 +95,15 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>Поддержка xcframework нужна для библиотек, у которых мы хотим закрыть исходный код. Или, например, у KMM библиотеки, которая нужна как зависимость.&lt;/p>
 &lt;p>Такие фреймворки ограничены только Apple платформой и теми архитектурами, под которые они собраны. Это может вызывать проблемы при разработке.&lt;/p>
 &lt;p>Подробнее об этих фреймоврках и интеграции в Swift Package Manager в &lt;a href="https://developer.apple.com/wwdc20/10147">видео Distribute binary frameworks as Swift Packages&lt;/a> и &lt;a href="https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages">документации о Binary Frameworks&lt;/a>&lt;/p>
-&lt;h2 id="как-интегрировать-пакеты-и-что-со-сборкой-на-ci">
-&lt;a href="#%d0%ba%d0%b0%d0%ba-%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b8-%d1%87%d1%82%d0%be-%d1%81%d0%be-%d1%81%d0%b1%d0%be%d1%80%d0%ba%d0%be%d0%b9-%d0%bd%d0%b0-ci" class="anchor">
+&lt;h2 id="интеграция-пакетов-и-сборка-на-ci">
+&lt;a href="#%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d0%be%d0%b2-%d0%b8-%d1%81%d0%b1%d0%be%d1%80%d0%ba%d0%b0-%d0%bd%d0%b0-ci" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-Как интегрировать пакеты и что со сборкой на CI
+Интеграция пакетов и сборка на CI
 &lt;/h2>
 &lt;h3 id="внешние-пакеты-внутри-приложения">
 &lt;a href="#%d0%b2%d0%bd%d0%b5%d1%88%d0%bd%d0%b8%d0%b5-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b2%d0%bd%d1%83%d1%82%d1%80%d0%b8-%d0%bf%d1%80%d0%b8%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f" class="anchor">
@@ -141,15 +130,15 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 Модульное приложение на Swift Package Manager
 &lt;/h3>
 &lt;p>&lt;strong>Модули&lt;/strong> выделять стало намного проще. &lt;code>File&lt;/code> &amp;gt; &lt;code>New&lt;/code> &amp;gt; &lt;code>Swift Package&lt;/code>. Добавляя его в репозиторий и проект - появляется понятная структура. Она повторяет файлы внутри, в отличие от обычных проектов. Генерируется папка тестов, автоматом считывается Scheme для билда и тестирования пакета. Зависимости такого модуля можно объявить в Package.swift&lt;/p>
-&lt;h2 id="как-структурировать-пакеты-в-swiftpm">
-&lt;a href="#%d0%ba%d0%b0%d0%ba-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b2-swiftpm" class="anchor">
+&lt;h2 id="структура-пакетов">
+&lt;a href="#%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d0%be%d0%b2" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-Как структурировать пакеты в SwiftPM
+Структура пакетов
 &lt;/h2>
 &lt;p>1 репозиторий = коллекция пакетов.&lt;/p>
 &lt;p>&lt;strong>Executable&lt;/strong> — cli. Удобно разрабатывать с любыми пакетами, которые тоже поддерживают SwiftPM. &lt;a href="https://github.com/apple/swift-argument-parser">swift-argument-parser&lt;/a> — мощь.&lt;/p>
@@ -399,7 +388,18 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>&lt;a href="https://swift.org/package-manager/">Обзор по SwiftPM от Apple&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://docs.swift.org/package-manager/">Документация по API SwiftPM в Package.swift файле&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://developer.apple.com/videos/developer-tools/swift?q=package">Видео WWDC про Swift Packages&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://swiftpackageindex.com">Публичный список доступных пакетов в SwiftPM&lt;/a>&lt;/p></description></item><item><title>Modern Collection Views</title><link>https://agapovone.github.io/articles/moderncollection/</link><pubDate>Wed, 21 Jul 2021 10:49:14 +0500</pubDate><guid>https://agapovone.github.io/articles/moderncollection/</guid><description>
+&lt;p>&lt;a href="https://swiftpackageindex.com">Публичный список доступных пакетов в SwiftPM&lt;/a>&lt;/p>
+&lt;h2 id="upd-122021">
+&lt;a href="#upd-122021" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+UPD: 12.2021
+&lt;/h2>
+&lt;p>Всё ещё очень долго происходит загрузка пакетов при открытии проекта в Xcode. Если подряд открыть проект несколько раз — то и загрузка будет происходить каждый из этих раз. Это может занимать очень много времени. В Cocoapods же можно было не обновлять и не подтягивать каждый раз пакеты.&lt;/p></description></item><item><title>Modern Collection Views</title><link>https://agapovone.github.io/articles/moderncollection/</link><pubDate>Wed, 21 Jul 2021 10:49:14 +0500</pubDate><guid>https://agapovone.github.io/articles/moderncollection/</guid><description>
 &lt;p>&lt;a href="https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views">source от Apple&lt;/a>&lt;/p>
 &lt;p>iOS 14+ для реализации всех фич.
 В iOS 13 ввели diffable data source.

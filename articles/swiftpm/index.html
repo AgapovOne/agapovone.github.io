@@ -16,7 +16,7 @@
 <meta property="og:description" content="iOS and nothing else">
 <link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css>
-<link rel=stylesheet href=/sass/main.min.5639ed2e3f4100da2c175acf339d9978aa43eef9a48aae1299c3fdf8ee4878fd.css>
+<link rel=stylesheet href=/sass/main.min.796719d7f20145839e4ac3d1cc2e47c5723771803b71af5dab2835341e23431f.css>
 <script type=text/javascript>(function(a,e,f,g,b,c,d){a[b]=a[b]||function(){(a[b].a=a[b].a||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym"),ym(83528200,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0})</script>
 <noscript><div>
 <img src=https://mc.yandex.ru/watch/83528200 style=position:absolute;left:-9999px alt></div></noscript>
@@ -60,13 +60,7 @@ Agapov Alexey
 </div>
 </div>
 </header>
-<div class=article-post><h2 id=upd-122021>
-<a href=#upd-122021 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-UPD: 12.2021
-</h2>
-<p>Всё ещё очень долго происходит загрузка пакетов при открытии проекта в Xcode. Если подряд открыть проект несколько раз — то и загрузка будет происходить каждый из этих раз. Это может занимать очень много времени. В Cocoapods же можно было не обновлять и не подтягивать каждый раз пакеты.</p>
-<h2 id=вопросы>
+<div class=article-post><h2 id=вопросы>
 <a href=#%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 Вопросы
@@ -132,10 +126,10 @@ SwiftGen, R.swift
 <p>Поддержка xcframework нужна для библиотек, у которых мы хотим закрыть исходный код. Или, например, у KMM библиотеки, которая нужна как зависимость.</p>
 <p>Такие фреймворки ограничены только Apple платформой и теми архитектурами, под которые они собраны. Это может вызывать проблемы при разработке.</p>
 <p>Подробнее об этих фреймоврках и интеграции в Swift Package Manager в <a href=https://developer.apple.com/wwdc20/10147>видео Distribute binary frameworks as Swift Packages</a> и <a href=https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages>документации о Binary Frameworks</a></p>
-<h2 id=как-интегрировать-пакеты-и-что-со-сборкой-на-ci>
-<a href=#%d0%ba%d0%b0%d0%ba-%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b8-%d1%87%d1%82%d0%be-%d1%81%d0%be-%d1%81%d0%b1%d0%be%d1%80%d0%ba%d0%be%d0%b9-%d0%bd%d0%b0-ci class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h2 id=интеграция-пакетов-и-сборка-на-ci>
+<a href=#%d0%b8%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d0%be%d0%b2-%d0%b8-%d1%81%d0%b1%d0%be%d1%80%d0%ba%d0%b0-%d0%bd%d0%b0-ci class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
-Как интегрировать пакеты и что со сборкой на CI
+Интеграция пакетов и сборка на CI
 </h2>
 <h3 id=внешние-пакеты-внутри-приложения>
 <a href=#%d0%b2%d0%bd%d0%b5%d1%88%d0%bd%d0%b8%d0%b5-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b2%d0%bd%d1%83%d1%82%d1%80%d0%b8-%d0%bf%d1%80%d0%b8%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
@@ -152,10 +146,10 @@ SwiftGen, R.swift
 Модульное приложение на Swift Package Manager
 </h3>
 <p><strong>Модули</strong> выделять стало намного проще. <code>File</code> > <code>New</code> > <code>Swift Package</code>. Добавляя его в репозиторий и проект - появляется понятная структура. Она повторяет файлы внутри, в отличие от обычных проектов. Генерируется папка тестов, автоматом считывается Scheme для билда и тестирования пакета. Зависимости такого модуля можно объявить в Package.swift</p>
-<h2 id=как-структурировать-пакеты-в-swiftpm>
-<a href=#%d0%ba%d0%b0%d0%ba-%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d1%8b-%d0%b2-swiftpm class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h2 id=структура-пакетов>
+<a href=#%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%b0-%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d0%be%d0%b2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
-Как структурировать пакеты в SwiftPM
+Структура пакетов
 </h2>
 <p>1 репозиторий = коллекция пакетов.</p>
 <p><strong>Executable</strong> — cli. Удобно разрабатывать с любыми пакетами, которые тоже поддерживают SwiftPM. <a href=https://github.com/apple/swift-argument-parser>swift-argument-parser</a> — мощь.</p>
@@ -378,6 +372,12 @@ Package.swift
 <p><a href=https://docs.swift.org/package-manager/>Документация по API SwiftPM в Package.swift файле</a></p>
 <p><a href="https://developer.apple.com/videos/developer-tools/swift?q=package">Видео WWDC про Swift Packages</a></p>
 <p><a href=https://swiftpackageindex.com>Публичный список доступных пакетов в SwiftPM</a></p>
+<h2 id=upd-122021>
+<a href=#upd-122021 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+UPD: 12.2021
+</h2>
+<p>Всё ещё очень долго происходит загрузка пакетов при открытии проекта в Xcode. Если подряд открыть проект несколько раз — то и загрузка будет происходить каждый из этих раз. Это может занимать очень много времени. В Cocoapods же можно было не обновлять и не подтягивать каждый раз пакеты.</p>
 </div>
 <nav class=toc></nav>
 </article>
@@ -401,6 +401,6 @@ Modern Collection Views
 <script defer src=/ts/features.882b72337b0ef8cf09fe2162c5a3e8bc2381c17b65e1c654a4fbd770d38fe420.js data-enable-footnotes=true></script>
 </footer>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js></script>
-<script>tocbot.init({tocSelector:".toc",contentSelector:".article-post",headingSelector:"h2, h3, h4"})</script>
+<script>tocbot.init({tocSelector:".toc",contentSelector:".article-post",headingSelector:"h2",collapseDepth:2})</script>
 </body>
 </html>
