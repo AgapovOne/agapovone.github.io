@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Agapov Alexey</title><link>https://agapovone.github.io/</link><description>Recent content on Agapov Alexey</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Sun, 25 Jul 2021 10:40:20 +0500</lastBuildDate><atom:link href="https://agapovone.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift Package Manager in 2021</title><link>https://agapovone.github.io/articles/swiftpm/</link><pubDate>Sun, 25 Jul 2021 10:40:20 +0500</pubDate><guid>https://agapovone.github.io/articles/swiftpm/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Agapov Alexey</title><link>https://agapovone.github.io/</link><description>Recent content on Agapov Alexey</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://agapovone.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift Package Manager in 2021</title><link>https://agapovone.github.io/articles/swiftpm/</link><pubDate>Sun, 25 Jul 2021 10:40:20 +0500</pubDate><guid>https://agapovone.github.io/articles/swiftpm/</guid><description>
 &lt;h2 id="вопросы">
 &lt;a href="#%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -198,31 +198,31 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/li>
 &lt;/ul>
 &lt;p>xcworkspace файл объединит в себе две группы&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code class="language-xml" data-lang="xml">&lt;span style="color:#ff79c6">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span>
-&lt;span style="color:#ff79c6">&amp;lt;Workspace&lt;/span>
-&lt;span style="color:#50fa7b">version =&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;1.0&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">&amp;gt;&lt;/span>
-&lt;span style="color:#ff79c6">&amp;lt;FileRef&lt;/span>
-&lt;span style="color:#50fa7b">location =&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;group:.&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">&amp;gt;&lt;/span>
-&lt;span style="color:#ff79c6">&amp;lt;/FileRef&amp;gt;&lt;/span>
-&lt;span style="color:#ff79c6">&amp;lt;FileRef&lt;/span>
-&lt;span style="color:#50fa7b">location =&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;group:Example/Example.xcodeproj&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">&amp;gt;&lt;/span>
-&lt;span style="color:#ff79c6">&amp;lt;/FileRef&amp;gt;&lt;/span>
-&lt;span style="color:#ff79c6">&amp;lt;/Workspace&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&amp;lt;Workspace&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">version =&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;1.0&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">&amp;lt;FileRef&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">location =&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;group:.&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">&amp;lt;/FileRef&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">&amp;lt;FileRef&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#50fa7b">location =&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;group:Example/Example.xcodeproj&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">&amp;lt;/FileRef&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&amp;lt;/Workspace&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>В таком случае xcworkspace повторяет всю структуру папок, при этом имея все схемы для сборки пакетов + схему для сборки Example проекта.&lt;/p>
 &lt;p>К сожалению, иногда приходится закрыть-открыть workspace. Обычно это проблемы со схемами или резолвом пакетов.&lt;/p>
@@ -240,97 +240,97 @@ Package.swift
 &lt;p>&lt;code>// swift-tools-version:5.3&lt;/code> - актуальная версия тулзов. Актуальная фича в этой версии - process/copy ресурсов.&lt;/p>
 &lt;p>&lt;a href="https://docs.swift.org/package-manager/PackageDescription/index.html">API Reference swift.org&lt;/a> — место, где можно посмотреть документацию к каждому вызову внутри Package.swift&lt;/p>
 &lt;p>Про отличие static и dynamic библиотек можно почитать &lt;a href="https://theswiftdev.com/deep-dive-into-swift-frameworks/">в блоге theswiftdev&lt;/a>.&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code class="language-swift" data-lang="swift">&lt;span style="color:#6272a4">// swift-tools-version:5.3&lt;/span>
-&lt;span style="color:#8be9fd;font-style:italic">import&lt;/span> &lt;span style="color:#50fa7b">PackageDescription&lt;/span>
-&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">package&lt;/span> = Package(
-name: &lt;span style="color:#f1fa8c">&amp;#34;SimplePackage&amp;#34;&lt;/span>,
-platforms: [
-.iOS(.v11) &lt;span style="color:#6272a4">// поддерживает только iOS с версии 11&lt;/span>
-],
-products: [
-.library(
-name: &lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>,
-targets: [&lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>]
-),
-.library(
-name: &lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>,
-targets: [&lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>]
-)
-],
-dependencies: [
-.package(url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/marmelroy/PhoneNumberKit&amp;#34;&lt;/span>, .upToNextMajor(from: &lt;span style="color:#f1fa8c">&amp;#34;3.3.3&amp;#34;&lt;/span>)),
-.package(url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/ReactiveX/RxSwift.git&amp;#34;&lt;/span>, from: &lt;span style="color:#f1fa8c">&amp;#34;5.0.0&amp;#34;&lt;/span>),
-.package(name: &lt;span style="color:#f1fa8c">&amp;#34;Firebase&amp;#34;&lt;/span>, url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/firebase/firebase-ios-sdk.git&amp;#34;&lt;/span>, from: &lt;span style="color:#f1fa8c">&amp;#34;8.0.0&amp;#34;&lt;/span>)
-],
-targets: [
-.target(
-name: &lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>,
-dependencies: [&lt;span style="color:#f1fa8c">&amp;#34;PhoneNumberKit&amp;#34;&lt;/span>]
-),
-.target(
-name: &lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>,
-dependencies: [
-.product(name: &lt;span style="color:#f1fa8c">&amp;#34;FirebaseRemoteConfig&amp;#34;&lt;/span>, package: &lt;span style="color:#f1fa8c">&amp;#34;Firebase&amp;#34;&lt;/span>),
-&lt;span style="color:#f1fa8c">&amp;#34;RxSwift&amp;#34;&lt;/span>,
-.product(name: &lt;span style="color:#f1fa8c">&amp;#34;RxCocoa&amp;#34;&lt;/span>, package: &lt;span style="color:#f1fa8c">&amp;#34;RxSwift&amp;#34;&lt;/span>)
-],
-resources: [.process(&lt;span style="color:#f1fa8c">&amp;#34;Resources&amp;#34;&lt;/span>)] &lt;span style="color:#6272a4">// Resources — папка в Sources/BigModule&lt;/span>
-),
-.testTarget(
-name: &lt;span style="color:#f1fa8c">&amp;#34;BigModuleTests&amp;#34;&lt;/span>,
-dependencies: [&lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>]
-),
-]
-)
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-swift" data-lang="swift">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">// swift-tools-version:5.3&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">import&lt;/span> &lt;span style="color:#50fa7b">PackageDescription&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">package&lt;/span> = Package(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name: &lt;span style="color:#f1fa8c">&amp;#34;SimplePackage&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> platforms: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .iOS(.v11) &lt;span style="color:#6272a4">// поддерживает только iOS с версии 11&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> products: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .library(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name: &lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> targets: [&lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .library(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name: &lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> targets: [&lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> )
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dependencies: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .package(url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/marmelroy/PhoneNumberKit&amp;#34;&lt;/span>, .upToNextMajor(from: &lt;span style="color:#f1fa8c">&amp;#34;3.3.3&amp;#34;&lt;/span>)),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .package(url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/ReactiveX/RxSwift.git&amp;#34;&lt;/span>, from: &lt;span style="color:#f1fa8c">&amp;#34;5.0.0&amp;#34;&lt;/span>),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .package(name: &lt;span style="color:#f1fa8c">&amp;#34;Firebase&amp;#34;&lt;/span>, url: &lt;span style="color:#f1fa8c">&amp;#34;https://github.com/firebase/firebase-ios-sdk.git&amp;#34;&lt;/span>, from: &lt;span style="color:#f1fa8c">&amp;#34;8.0.0&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> targets: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .target(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name: &lt;span style="color:#f1fa8c">&amp;#34;Helpers&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dependencies: [&lt;span style="color:#f1fa8c">&amp;#34;PhoneNumberKit&amp;#34;&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .target(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name: &lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dependencies: [
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .product(name: &lt;span style="color:#f1fa8c">&amp;#34;FirebaseRemoteConfig&amp;#34;&lt;/span>, package: &lt;span style="color:#f1fa8c">&amp;#34;Firebase&amp;#34;&lt;/span>),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;RxSwift&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .product(name: &lt;span style="color:#f1fa8c">&amp;#34;RxCocoa&amp;#34;&lt;/span>, package: &lt;span style="color:#f1fa8c">&amp;#34;RxSwift&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ],
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> resources: [.process(&lt;span style="color:#f1fa8c">&amp;#34;Resources&amp;#34;&lt;/span>)] &lt;span style="color:#6272a4">// Resources — папка в Sources/BigModule&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .testTarget(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> name: &lt;span style="color:#f1fa8c">&amp;#34;BigModuleTests&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dependencies: [&lt;span style="color:#f1fa8c">&amp;#34;BigModule&amp;#34;&lt;/span>]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="релизы">
 &lt;a href="#%d1%80%d0%b5%d0%bb%d0%b8%d0%b7%d1%8b" class="anchor">
@@ -359,15 +359,15 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>&lt;strong>Проблема совместимости&lt;/strong> с тем, что модули не подходят друг другу решается вручную. Как, например, если мы поставим &lt;a href="https://github.com/ReactiveX/RxSwift">RxSwift&lt;/a> 6.0.0+ и последнюю версию &lt;a href="https://github.com/Moya/Moya/releases/tag/14.0.1">Moya&lt;/a>, которая работает с RxSwift 5.0.0+. Тогда нужно явно указать, что версия RxSwift необходима старая. Автоматически это не решится, но лог пишется понятный.&lt;/p>
 &lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/swiftpm/versions.png" alt="" width=616 height="158" />&lt;/p>
 &lt;p>&lt;strong>Проблема с разными версиями одного пакета&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code class="language-text" data-lang="text">Dependencies could not be resolved because root depends on &amp;#39;Moya&amp;#39; 14.0.1..&amp;lt;15.0.0 and root depends on &amp;#39;Quick&amp;#39; 4.0.0..&amp;lt;5.0.0.
-&amp;#39;Moya&amp;#39; &amp;gt;= 14.0.1 practically depends on &amp;#39;Quick&amp;#39; 2.0.0..&amp;lt;3.0.0 because &amp;#39;Moya&amp;#39; 14.0.1 depends on &amp;#39;Quick&amp;#39; 2.0.0..&amp;lt;3.0.0 and no versions of &amp;#39;Moya&amp;#39; match the requirement 14.0.2..&amp;lt;15.0.0.
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>Dependencies could not be resolved because root depends on &amp;#39;Moya&amp;#39; 14.0.1..&amp;lt;15.0.0 and root depends on &amp;#39;Quick&amp;#39; 4.0.0..&amp;lt;5.0.0.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;#39;Moya&amp;#39; &amp;gt;= 14.0.1 practically depends on &amp;#39;Quick&amp;#39; 2.0.0..&amp;lt;3.0.0 because &amp;#39;Moya&amp;#39; 14.0.1 depends on &amp;#39;Quick&amp;#39; 2.0.0..&amp;lt;3.0.0 and no versions of &amp;#39;Moya&amp;#39; match the requirement 14.0.2..&amp;lt;15.0.0.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Не вижу возможного решения в текущей версии, так как Package.swift нельзя выделить отдельно. Думал о том, чтобы Quick с версией другой имел название библиотеки вроде &lt;code>Quick-4&lt;/code>, и тогда бы не должна была ломаться связка. Но как такое решить с текущей интеграцией Xcode - не понятно.&lt;/p>
 &lt;p>Валидные решения на сейчас:&lt;/p>
@@ -454,54 +454,54 @@ Data source
 &lt;/h3>
 &lt;p>Data-driven работает через… RxDataSources? DifferenceKit? Native!
 Собираем &lt;code>NSDiffableDataSourceSnapshot&lt;/code>, применяем.&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code class="language-swift" data-lang="swift">&lt;span style="color:#8be9fd;font-style:italic">var&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">snapshot&lt;/span> = NSDiffableDataSourceSnapshot&amp;lt;Section, &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>&amp;gt;()
-snapshot.appendSections([.main])
-snapshot.appendItems(&lt;span style="color:#8be9fd;font-style:italic">Array&lt;/span>(&lt;span style="color:#bd93f9">0.&lt;/span>.&amp;lt;&lt;span style="color:#bd93f9">94&lt;/span>))
-dataSource.apply(snapshot, animatingDifferences: &lt;span style="color:#ff79c6">false&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-swift" data-lang="swift">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">var&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">snapshot&lt;/span> = NSDiffableDataSourceSnapshot&amp;lt;Section, &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>&amp;gt;()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>snapshot.appendSections([.main])
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>snapshot.appendItems(&lt;span style="color:#8be9fd;font-style:italic">Array&lt;/span>(&lt;span style="color:#bd93f9">0.&lt;/span>.&amp;lt;&lt;span style="color:#bd93f9">94&lt;/span>))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dataSource.apply(snapshot, animatingDifferences: &lt;span style="color:#ff79c6">false&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Data source — конфигурация с cellRegistration&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code class="language-swift" data-lang="swift">&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">cellRegistration&lt;/span> = UICollectionView.CellRegistration&amp;lt;TextCell, &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>&amp;gt; { (cell, indexPath, identifier) &lt;span style="color:#ff79c6">in&lt;/span>
-&lt;span style="color:#6272a4">// Populate the cell with our item description.&lt;/span>
-cell.label.text = &lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>&lt;span style="color:#f1fa8c">\(&lt;/span>identifier&lt;span style="color:#f1fa8c">)&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>
-}
-dataSource = UICollectionViewDiffableDataSource&amp;lt;Section, &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>&amp;gt;(
-collectionView: collectionView
-) { (
-collectionView: UICollectionView,
-indexPath: IndexPath,
-identifier: &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>
-) -&amp;gt; UICollectionViewCell? &lt;span style="color:#ff79c6">in&lt;/span>
-&lt;span style="color:#6272a4">// Return the cell.&lt;/span>
-&lt;span style="color:#ff79c6">return&lt;/span> collectionView.dequeueConfiguredReusableCell(using: cellRegistration, &lt;span style="color:#ff79c6">for&lt;/span>: indexPath, item: identifier)
-}
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-swift" data-lang="swift">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">cellRegistration&lt;/span> = UICollectionView.CellRegistration&amp;lt;TextCell, &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>&amp;gt; { (cell, indexPath, identifier) &lt;span style="color:#ff79c6">in&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Populate the cell with our item description.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> cell.label.text = &lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>&lt;span style="color:#f1fa8c">\(&lt;/span>identifier&lt;span style="color:#f1fa8c">)&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dataSource = UICollectionViewDiffableDataSource&amp;lt;Section, &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>&amp;gt;(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> collectionView: collectionView
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>) { (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> collectionView: UICollectionView,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> indexPath: IndexPath,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> identifier: &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>) -&amp;gt; UICollectionViewCell? &lt;span style="color:#ff79c6">in&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Return the cell.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> collectionView.dequeueConfiguredReusableCell(using: cellRegistration, &lt;span style="color:#ff79c6">for&lt;/span>: indexPath, item: identifier)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Есть одна проблемка с native data source. Он постоянно будет удалять и затем добавлять новую ячейку, не делая reload данных на месте (&lt;a href="https://github.com/ekazaev/ChatLayout#about-uicollectionviewdiffabledatasource">тут говорят&lt;/a>).
 &lt;a href="https://github.com/ra1028/DifferenceKit">DifferenceKit&lt;/a> позволяет это делать, поддерживает перезагрузку. Бенчмарки этой либы говорят, что она самая быстрая среди всех похожих либ. Хорошая либа
@@ -518,71 +518,75 @@ Layout для сложных экранов
 &lt;/h3>
 &lt;p>&lt;img loading="lazy" src="https://agapovone.github.io/collections/1.png" alt="" width=1170 height="2532" />
 &lt;code>DistinctSectionsViewController&lt;/code> как пример разных layout для разных секций.&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">&lt;code class="language-swift" data-lang="swift">&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">layout&lt;/span> = UICollectionViewCompositionalLayout { (
-sectionIndex: &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>,
-layoutEnvironment: NSCollectionLayoutEnvironment
-) -&amp;gt; NSCollectionLayoutSection? &lt;span style="color:#ff79c6">in&lt;/span>
-&lt;span style="color:#ff79c6">guard&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">sectionLayoutKind&lt;/span> = SectionLayoutKind(rawValue: sectionIndex) &lt;span style="color:#ff79c6">else&lt;/span> { &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#ff79c6">nil&lt;/span> }
-&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">columns&lt;/span> = sectionLayoutKind.columnCount
-&lt;span style="color:#6272a4">// The group auto-calculates the actual item width to make&lt;/span>
-&lt;span style="color:#6272a4">// the requested number of columns fit, so this widthDimension is ignored.&lt;/span>
-&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">itemSize&lt;/span> = NSCollectionLayoutSize(
-widthDimension: .fractionalWidth(&lt;span style="color:#bd93f9">1.0&lt;/span>),
-heightDimension: .fractionalHeight(&lt;span style="color:#bd93f9">1.0&lt;/span>)
-)
-&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">item&lt;/span> = NSCollectionLayoutItem(layoutSize: itemSize)
-item.contentInsets = NSDirectionalEdgeInsets(top: &lt;span style="color:#bd93f9">2&lt;/span>, leading: &lt;span style="color:#bd93f9">2&lt;/span>, bottom: &lt;span style="color:#bd93f9">2&lt;/span>, trailing: &lt;span style="color:#bd93f9">2&lt;/span>)
-&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">groupHeight&lt;/span> = columns == &lt;span style="color:#bd93f9">1&lt;/span> ?
-NSCollectionLayoutDimension.absolute(&lt;span style="color:#bd93f9">44&lt;/span>) :
-NSCollectionLayoutDimension.fractionalWidth(&lt;span style="color:#bd93f9">0.2&lt;/span>)
-&lt;span style="color:#6272a4">// Element height takes 20% of section width&lt;/span>
-&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">groupSize&lt;/span> = NSCollectionLayoutSize(
-widthDimension: .fractionalWidth(&lt;span style="color:#bd93f9">1.0&lt;/span>),
-heightDimension: groupHeight
-)
-&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">group&lt;/span> = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
-&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">section&lt;/span> = NSCollectionLayoutSection(group: group)
-section.contentInsets = NSDirectionalEdgeInsets(top: &lt;span style="color:#bd93f9">20&lt;/span>, leading: &lt;span style="color:#bd93f9">20&lt;/span>, bottom: &lt;span style="color:#bd93f9">20&lt;/span>, trailing: &lt;span style="color:#bd93f9">20&lt;/span>)
-section.contentInsetsReference = .readableContent
-&lt;span style="color:#ff79c6">return&lt;/span> section
-}
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-swift" data-lang="swift">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">layout&lt;/span> = UICollectionViewCompositionalLayout { (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sectionIndex: &lt;span style="color:#8be9fd;font-style:italic">Int&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> layoutEnvironment: NSCollectionLayoutEnvironment
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ) -&amp;gt; NSCollectionLayoutSection? &lt;span style="color:#ff79c6">in&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">guard&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">sectionLayoutKind&lt;/span> = SectionLayoutKind(rawValue: sectionIndex) &lt;span style="color:#ff79c6">else&lt;/span> { &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#ff79c6">nil&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">columns&lt;/span> = sectionLayoutKind.columnCount
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// The group auto-calculates the actual item width to make&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// the requested number of columns fit, so this widthDimension is ignored.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">itemSize&lt;/span> = NSCollectionLayoutSize(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> widthDimension: .fractionalWidth(&lt;span style="color:#bd93f9">1.0&lt;/span>),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> heightDimension: .fractionalHeight(&lt;span style="color:#bd93f9">1.0&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> )
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">item&lt;/span> = NSCollectionLayoutItem(layoutSize: itemSize)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> item.contentInsets = NSDirectionalEdgeInsets(top: &lt;span style="color:#bd93f9">2&lt;/span>, leading: &lt;span style="color:#bd93f9">2&lt;/span>, bottom: &lt;span style="color:#bd93f9">2&lt;/span>, trailing: &lt;span style="color:#bd93f9">2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">groupHeight&lt;/span> = columns == &lt;span style="color:#bd93f9">1&lt;/span> ?
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> NSCollectionLayoutDimension.absolute(&lt;span style="color:#bd93f9">44&lt;/span>) :
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> NSCollectionLayoutDimension.fractionalWidth(&lt;span style="color:#bd93f9">0.2&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Element height takes 20% of section width&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">groupSize&lt;/span> = NSCollectionLayoutSize(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> widthDimension: .fractionalWidth(&lt;span style="color:#bd93f9">1.0&lt;/span>),
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> heightDimension: groupHeight
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> )
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">group&lt;/span> = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">let&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">section&lt;/span> = NSCollectionLayoutSection(group: group)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> section.contentInsets = NSDirectionalEdgeInsets(top: &lt;span style="color:#bd93f9">20&lt;/span>, leading: &lt;span style="color:#bd93f9">20&lt;/span>, bottom: &lt;span style="color:#bd93f9">20&lt;/span>, trailing: &lt;span style="color:#bd93f9">20&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> section.contentInsetsReference = .readableContent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> section
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ul>
 &lt;li>&lt;strong>Layout Environment&lt;/strong> с размерами и трейтами позволит менять layout. Например, в несколько колонок на айпад. Пример — &lt;code>AdaptiveSectionsViewController&lt;/code>&lt;/li>
