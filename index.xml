@@ -1,4 +1,154 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Agapov Alexey</title><link>https://agapovone.github.io/</link><description>Recent content on Agapov Alexey</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://agapovone.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Swift Package Manager in 2021</title><link>https://agapovone.github.io/articles/swiftpm/</link><pubDate>Sun, 25 Jul 2021 10:40:20 +0500</pubDate><guid>https://agapovone.github.io/articles/swiftpm/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Agapov Alexey</title><link>https://agapovone.github.io/</link><description>Recent content on Agapov Alexey</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Tue, 10 Jan 2023 17:18:00 +0500</lastBuildDate><atom:link href="https://agapovone.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Resources</title><link>https://agapovone.github.io/articles/resources/</link><pubDate>Tue, 10 Jan 2023 17:18:00 +0500</pubDate><guid>https://agapovone.github.io/articles/resources/</guid><description>
+&lt;h3 id="-крутые-авторы-и-разработчики-в-твиттере">
+&lt;a href="#-%d0%ba%d1%80%d1%83%d1%82%d1%8b%d0%b5-%d0%b0%d0%b2%d1%82%d0%be%d1%80%d1%8b-%d0%b8-%d1%80%d0%b0%d0%b7%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%87%d0%b8%d0%ba%d0%b8-%d0%b2-%d1%82%d0%b2%d0%b8%d1%82%d1%82%d0%b5%d1%80%d0%b5" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+🐦 Крутые авторы и разработчики в твиттере
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://twitter.com/mxcl">mxcl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/mattt">mattt nshipster&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/chriseidhof">chriseidhof&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/bohdan_orlov">bohdan_orlov&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/johnsundell">johnsundell&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/icanzilb">icanzilb&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/merowing_">merowing&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/_inside">inside&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/twannl">twannl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/seanallen_dev">seanallen_dev&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/daveverwer">daveverwer&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/twostraws">twostraws&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.twitter.com/pointfreeco">pointfree&lt;/a> и отдельно &lt;a href="https://www.twitter.com/mbrandonw">brandon&lt;/a>, &lt;a href="https://www.twitter.com/stephencelis">stephen&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="-периодические-материалы">
+&lt;a href="#-%d0%bf%d0%b5%d1%80%d0%b8%d0%be%d0%b4%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%bc%d0%b0%d1%82%d0%b5%d1%80%d0%b8%d0%b0%d0%bb%d1%8b" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+📫 Периодические материалы
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://podlodka.io/">podlodka.io&lt;/a> — подкаст обо всём&lt;/li>
+&lt;li>&lt;a href="https://iosdevweekly.com/">iosdevweekly.com&lt;/a> — недельный дайджест мира iOS/macOS разработки&lt;/li>
+&lt;/ul>
+&lt;h3 id="-блоги">
+&lt;a href="#-%d0%b1%d0%bb%d0%be%d0%b3%d0%b8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+✍️ Блоги
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://objc.io/">objc.io&lt;/a> — статьи и видео&lt;/li>
+&lt;li>&lt;a href="https://www.swiftbysundell.com/">swiftbysundell.com&lt;/a> — блог и подкаст, хорошие статьи по базовым материалам&lt;/li>
+&lt;li>&lt;a href="https://nshipster.com/">nshipster.com&lt;/a> — блог с глубокими знаниями и разбором от инженера Apple&lt;/li>
+&lt;li>&lt;a href="https://www.avanderlee.com/">avanderlee.com&lt;/a> — блог с хорошим контентом на разные темы.&lt;/li>
+&lt;li>&lt;a href="https://www.pointfree.co/">pointfree.co&lt;/a> — видео, есть бесплатные. Функциональные подходы.&lt;/li>
+&lt;li>&lt;a href="https://useyourloaf.com/">useyourloaf.com&lt;/a> — отличный блог и книга про AutoLayout. Контент книги = статьи из блога.&lt;/li>
+&lt;li>&lt;a href="https://refactoring.guru/ru">refactoring.guru/ru&lt;/a> - отличный сайт, есть книга. Паттерны ООП, разбор рефакторинга, примеры кода.&lt;/li>
+&lt;li>&lt;a href="https://www.hackingwithswift.com/">hackingwithswift.com&lt;/a> — хороший контент. Первый выбор для поиска типичных решений вместо stackoverflow&lt;/li>
+&lt;/ul>
+&lt;h3 id="-статьи">
+&lt;a href="#-%d1%81%d1%82%d0%b0%d1%82%d1%8c%d0%b8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+📰 Статьи
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52">Поверхностный обзор архитектур&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://habr.com/ru/company/oleg-bunin/blog/437584/">Математические основы AutoLayout&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://rambo.codes/posts/2020-02-20-mvc-with-sugar">MVC, и как его можно улучшить&lt;/a>. Отличная статья про FlowController, Child controllers.&lt;/li>
+&lt;li>&lt;a href="https://github.com/onmyway133/blog/issues/106">FlowController против Coordinator&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mokacoding.com/blog/swift-test-doubles/">Test doubles in Swift: dummies, fakes, stubs, and spies.&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="-книги">
+&lt;a href="#-%d0%ba%d0%bd%d0%b8%d0%b3%d0%b8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+📖 Книги
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.objc.io/books/app-architecture/">App Architecture&lt;/a> – книга по архитектурам с примерами&lt;/li>
+&lt;li>&lt;a href="https://www.objc.io/books">Книги на objc.io&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://store.raywenderlich.com/">Разные книги с крутым контентом&lt;/a> Для начала в iOS хорошая iOS Apprentice.&lt;/li>
+&lt;li>&lt;a href="https://flight.school/">Книги от Mattt (NSHipster)&lt;/a> для углубленного изучения&lt;/li>
+&lt;/ul>
+&lt;h3 id="-swift">
+&lt;a href="#-swift" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+🧡 Swift
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://swiftbook.ru/content/docs/">Перевод&lt;/a> официальной книги &lt;a href="https://developer.apple.com/swift/">Swift от Apple&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.whatsnewinswift.com/">Сравнение фич swift по-версиям&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.apple.com/documentation/swift/swift_standard_library">Стандартная библиотека Swift&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="-wwdc-must-watch">
+&lt;a href="#-wwdc-must-watch" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+🍏 WWDC must watch
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://developer.apple.com/videos/play/wwdc2018/417/">Testing Tips &amp;amp; Tricks&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.apple.com/videos/play/wwdc2018/416/">iOS Memory Deep Dive&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.apple.com/videos/play/wwdc2018/414/">Understanding Crashes and Crashlogs&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="-видео">
+&lt;a href="#-%d0%b2%d0%b8%d0%b4%d0%b5%d0%be" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+🎥 Видео
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=A1vzcxR-Ss0">MVC is not your problem&lt;/a> — доклад о том, как делать MVC, не делая его massive.&lt;/li>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=J8u-tIt5wo4">Правильный MVC&lt;/a> — как справиться с MVC. Доклад от Redmadrobot&lt;/li>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=7HtE3Ci78nU">Как работать с сетью правильно&lt;/a> — доклад от Сбербанка. URLSession и правильные подходы к работе с сетью.&lt;/li>
+&lt;/ul>
+&lt;h3 id="-хранилища-знаний">
+&lt;a href="#-%d1%85%d1%80%d0%b0%d0%bd%d0%b8%d0%bb%d0%b8%d1%89%d0%b0-%d0%b7%d0%bd%d0%b0%d0%bd%d0%b8%d0%b9" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+📚 Хранилища знаний
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://tlroadmap.io/">TeamLead roadmap&lt;/a> – как развиваться самому в качестве тимлида&lt;/li>
+&lt;/ul></description></item><item><title>Swift Package Manager in 2021</title><link>https://agapovone.github.io/articles/swiftpm/</link><pubDate>Sun, 25 Jul 2021 10:40:20 +0500</pubDate><guid>https://agapovone.github.io/articles/swiftpm/</guid><description>
 &lt;h2 id="вопросы">
 &lt;a href="#%d0%b2%d0%be%d0%bf%d1%80%d0%be%d1%81%d1%8b" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
