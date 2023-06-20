@@ -5,28 +5,28 @@ Agapov Alexey</a></div><div class=flex><a href=/articles/>Articles</a>
 <a href=/tags/uikit/>UIKit</a></div></div></div></div></header><div class=article-post><p><a href=https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views>source от Apple</a></p><p>iOS 14+ для реализации всех фич.
 В iOS 13 ввели diffable data source.
 В iOS 14 появился compositional layout, реализующий все возможности таблиц и улучшающий коллекции.</p><h2 id=почему-не-таблица><a href=#%d0%bf%d0%be%d1%87%d0%b5%d0%bc%d1%83-%d0%bd%d0%b5-%d1%82%d0%b0%d0%b1%d0%bb%d0%b8%d1%86%d0%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Почему не таблица?</h2><ul><li>Горизонтальный скролл</li><li>Удобно конфигурировать state. highlighted/selected/disabled</li></ul><h2 id=что-позволяет-делать><a href=#%d1%87%d1%82%d0%be-%d0%bf%d0%be%d0%b7%d0%b2%d0%be%d0%bb%d1%8f%d0%b5%d1%82-%d0%b4%d0%b5%d0%bb%d0%b0%d1%82%d1%8c class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Что позволяет делать?</h2><ul><li>Collapsible/Expandable Sections</li><li>Секции с разным layout. inset grouped, sidebar (iPad-related), horizontal scroll, columns.</li></ul><h2 id=главные-фичи><a href=#%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d1%8b%d0%b5-%d1%84%d0%b8%d1%87%d0%b8 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Главные фичи</h2><h3 id=data-source><a href=#data-source class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Data source</h3><p>Data-driven работает через… RxDataSources? DifferenceKit? Native!
-Собираем <code>NSDiffableDataSourceSnapshot</code>, применяем.</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+Собираем <code>NSDiffableDataSourceSnapshot</code>, применяем.</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>var</span> <span style=color:#8be9fd;font-style:italic>snapshot</span> = NSDiffableDataSourceSnapshot&lt;Section, <span style=color:#8be9fd;font-style:italic>Int</span>&gt;()
 </span></span><span style=display:flex><span>snapshot.appendSections([.main])
 </span></span><span style=display:flex><span>snapshot.appendItems(<span style=color:#8be9fd;font-style:italic>Array</span>(<span style=color:#bd93f9>0.</span>.&lt;<span style=color:#bd93f9>94</span>))
 </span></span><span style=display:flex><span>dataSource.apply(snapshot, animatingDifferences: <span style=color:#ff79c6>false</span>)
-</span></span></code></pre></td></tr></table></div></div><p>Data source — конфигурация с cellRegistration</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span></span></code></pre></td></tr></table></div></div><p>Data source — конфигурация с cellRegistration</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>cellRegistration</span> = UICollectionView.CellRegistration&lt;TextCell, <span style=color:#8be9fd;font-style:italic>Int</span>&gt; { (cell, indexPath, identifier) <span style=color:#ff79c6>in</span>
 </span></span><span style=display:flex><span>  <span style=color:#6272a4>// Populate the cell with our item description.</span>
 </span></span><span style=display:flex><span>  cell.label.text = <span style=color:#f1fa8c>&#34;</span><span style=color:#f1fa8c>\(</span>identifier<span style=color:#f1fa8c>)</span><span style=color:#f1fa8c>&#34;</span>
@@ -44,38 +44,38 @@ Agapov Alexey</a></div><div class=flex><a href=/articles/>Articles</a>
 </span></span></code></pre></td></tr></table></div></div><p>Есть одна проблемка с native data source. Он постоянно будет удалять и затем добавлять новую ячейку, не делая reload данных на месте (<a href=https://github.com/ekazaev/ChatLayout#about-uicollectionviewdiffabledatasource>тут говорят</a>).
 <a href=https://github.com/ra1028/DifferenceKit>DifferenceKit</a> позволяет это делать, поддерживает перезагрузку. Бенчмарки этой либы говорят, что она самая быстрая среди всех похожих либ. Хорошая либа
 Но для использования с новым API cellRegistration нужно использовать native Data source</p><h3 id=layout-для-сложных-экранов><a href=#layout-%d0%b4%d0%bb%d1%8f-%d1%81%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d1%85-%d1%8d%d0%ba%d1%80%d0%b0%d0%bd%d0%be%d0%b2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Layout для сложных экранов</h3><p><img loading=lazy src=/collections/1.png alt width=1170 height=2532>
-<code>DistinctSectionsViewController</code> как пример разных layout для разных секций.</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
-</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+<code>DistinctSectionsViewController</code> как пример разных layout для разных секций.</p><div class=highlight><div style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
 </span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>let</span> <span style=color:#8be9fd;font-style:italic>layout</span> = UICollectionViewCompositionalLayout { (
 </span></span><span style=display:flex><span>  sectionIndex: <span style=color:#8be9fd;font-style:italic>Int</span>,
 </span></span><span style=display:flex><span>  layoutEnvironment: NSCollectionLayoutEnvironment
@@ -116,5 +116,5 @@ Agapov Alexey</a></div><div class=flex><a href=/articles/>Articles</a>
 <img loading=lazy src=/collections/3.png alt width=1170 height=2532>
 <code>PinnedSectionHeaderFooterViewController</code> в примере.</p><h3 id=пагинация-при-скролле><a href=#%d0%bf%d0%b0%d0%b3%d0%b8%d0%bd%d0%b0%d1%86%d0%b8%d1%8f-%d0%bf%d1%80%d0%b8-%d1%81%d0%ba%d1%80%d0%be%d0%bb%d0%bb%d0%b5 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Пагинация при скролле</h3><p><img loading=lazy src=/collections/4.png alt width=1668 height=2388>
 <code>OrthogonalScrollBehaviorViewController</code> в примере</p></div><nav class=toc></nav></article></div><div class=container><nav class="flex container suggested"><a rel=next href=/articles/swiftpm/ title="Next post (newer)"><span>Next</span>
-Swift Package Manager in 2021</a></nav></div><div class=container></div></main><footer class="footer flex"><section class=container><nav class=footer-links><a href=/index.xml>RSS</a></nav></section><script defer src=/ts/features.10be7d4b754b9dceb71734a10c8c89ba79f6b5cda9611b507bed984bc3ac7135.js data-enable-footnotes=true></script></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js></script>
+Swift Package Manager in 2021</a></nav></div><div class=container></div></main><footer class="footer flex"><section class=container><nav class=footer-links><a href=/index.xml>RSS</a></nav></section><script defer src=/ts/features.3972d4101dcf88b6ebc71ab1658821484b212b58fbf478acb2a844323fc900db.js data-enable-footnotes=true></script></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js></script>
 <script>tocbot.init({tocSelector:".toc",contentSelector:".article-post",headingSelector:"h2",collapseDepth:2})</script></body></html>
